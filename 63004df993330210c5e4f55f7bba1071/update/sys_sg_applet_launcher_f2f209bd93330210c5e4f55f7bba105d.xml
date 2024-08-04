@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_applet_launcher">
+    <sys_sg_applet_launcher action="INSERT_OR_UPDATE">
+        <access_control_type>user_roles</access_control_type>
+        <active>true</active>
+        <available_offline>true</available_offline>
+        <header_button/>
+        <header_titles/>
+        <hide_empty_sections>true</hide_empty_sections>
+        <name>Employee Management</name>
+        <required_roles>x_761472_emp_mgmt.user,x_761472_emp_mgmt.admin</required_roles>
+        <search_config/>
+        <sys_class_name>sys_sg_applet_launcher</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-04 05:45:09</sys_created_on>
+        <sys_id>f2f209bd93330210c5e4f55f7bba105d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Employee Management</sys_name>
+        <sys_package display_value="Employee Management" source="x_761472_emp_mgmt">63004df993330210c5e4f55f7bba1071</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_update_name>sys_sg_applet_launcher_f2f209bd93330210c5e4f55f7bba105d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-04 05:45:09</sys_updated_on>
+        <title>Employee Management</title>
+    </sys_sg_applet_launcher>
+</record_update>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_button_instance">
+    <sys_sg_button_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <button display_value="Edit Button (Leave)">03f241f193730210c5e4f55f7bba1073</button>
+        <color_theme/>
+        <description/>
+        <disable_offline>false</disable_offline>
+        <field_name/>
+        <icon/>
+        <label>Edit</label>
+        <location>top</location>
+        <name>Edit (Leave)</name>
+        <order/>
+        <parent>4ff241f193730210c5e4f55f7bba1046</parent>
+        <parent_table>sys_sg_form_screen</parent_table>
+        <sys_class_name>sys_sg_button_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-04 05:45:10</sys_created_on>
+        <sys_id>cff241f193730210c5e4f55f7bba107a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Edit (Leave)</sys_name>
+        <sys_package display_value="Employee Management" source="x_761472_emp_mgmt">63004df993330210c5e4f55f7bba1071</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_update_name>sys_sg_button_instance_cff241f193730210c5e4f55f7bba107a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-04 05:45:10</sys_updated_on>
+        <table/>
+    </sys_sg_button_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=cff241f193730210c5e4f55f7bba107a"/>
+</record_update>

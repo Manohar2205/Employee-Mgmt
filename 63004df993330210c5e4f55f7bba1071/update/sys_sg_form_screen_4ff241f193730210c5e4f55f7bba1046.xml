@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_form_screen">
+    <sys_sg_form_screen action="INSERT_OR_UPDATE">
+        <alert/>
+        <available_offline>true</available_offline>
+        <data_item/>
+        <description>Mobile app for Leaves</description>
+        <dynamic_prefetch_count/>
+        <empty_state/>
+        <fetch_type>not_required</fetch_type>
+        <filter/>
+        <hide_filters>false</hide_filters>
+        <hide_screen_name>false</hide_screen_name>
+        <icon display_value="icon-User">2af209bd93330210c5e4f55f7bba105c</icon>
+        <item_view/>
+        <name>Leave Form Screen</name>
+        <override_context_with_data_item>false</override_context_with_data_item>
+        <parameter_screen/>
+        <roles_override/>
+        <segments_height>medium</segments_height>
+        <segments_min_width>medium</segments_min_width>
+        <sys_class_name>sys_sg_form_screen</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-04 05:45:10</sys_created_on>
+        <sys_id>4ff241f193730210c5e4f55f7bba1046</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Leave Form Screen</sys_name>
+        <sys_package display_value="Employee Management" source="x_761472_emp_mgmt">63004df993330210c5e4f55f7bba1071</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_update_name>sys_sg_form_screen_4ff241f193730210c5e4f55f7bba1046</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-04 05:45:10</sys_updated_on>
+        <table>x_761472_emp_mgmt_leave</table>
+        <use_view_config>true</use_view_config>
+        <view_config display_value="Leave Detail Screen View Config">fef241f193730210c5e4f55f7bba100c</view_config>
+    </sys_sg_form_screen>
+    <sys_translated_text action="delete_multiple" query="documentkey=4ff241f193730210c5e4f55f7bba1046"/>
+</record_update>

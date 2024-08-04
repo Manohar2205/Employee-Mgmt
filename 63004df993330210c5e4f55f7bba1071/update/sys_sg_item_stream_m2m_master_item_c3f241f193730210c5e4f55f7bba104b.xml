@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_item_stream_m2m_master_item">
+    <sys_sg_item_stream_m2m_master_item action="INSERT_OR_UPDATE">
+        <item_stream display_value="Leave Item Stream">c3f241f193730210c5e4f55f7bba1049</item_stream>
+        <master_item display_value="Leave master_item">87f241f193730210c5e4f55f7bba104a</master_item>
+        <sys_class_name>sys_sg_item_stream_m2m_master_item</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-04 05:45:10</sys_created_on>
+        <sys_id>c3f241f193730210c5e4f55f7bba104b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Employee Management" source="x_761472_emp_mgmt">63004df993330210c5e4f55f7bba1071</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_update_name>sys_sg_item_stream_m2m_master_item_c3f241f193730210c5e4f55f7bba104b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-04 05:45:10</sys_updated_on>
+    </sys_sg_item_stream_m2m_master_item>
+</record_update>

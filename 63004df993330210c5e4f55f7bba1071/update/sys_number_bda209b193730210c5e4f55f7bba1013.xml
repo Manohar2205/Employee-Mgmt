@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
+    <sys_number action="INSERT_OR_UPDATE">
+        <category display_value="" name="x_761472_emp_mgmt_leave">x_761472_emp_mgmt_leave</category>
+        <maximum_digits>7</maximum_digits>
+        <number>1000</number>
+        <prefix>LEV</prefix>
+        <sys_class_name>sys_number</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-04 05:43:43</sys_created_on>
+        <sys_id>bda209b193730210c5e4f55f7bba1013</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>LEV</sys_name>
+        <sys_package display_value="Employee Management" source="x_761472_emp_mgmt">63004df993330210c5e4f55f7bba1071</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_update_name>sys_number_bda209b193730210c5e4f55f7bba1013</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-04 05:43:43</sys_updated_on>
+    </sys_number>
+</record_update>

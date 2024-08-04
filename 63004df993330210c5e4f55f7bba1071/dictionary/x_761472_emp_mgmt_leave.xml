@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="29a2c5b193730210c5e4f55f7bba107b" label="Leave" max_length="40" name="x_761472_emp_mgmt_leave" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Reason" mandatory="true" max_length="60" name="reason" type="string"/>
+        <element label="Half day" max_length="40" name="half_day" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Log" max_length="4000" name="log" type="journal"/>
+        <element attributes="edge_encryption_enabled=true" label="Start Date" max_length="40" name="start_date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" display="true" label="Leave type" mandatory="true" max_length="40" name="leave_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Maternity Leave" value="maternity_leave"/>
+                <element inactive_on_update="false" label="Casual Leave" value="casual_leave"/>
+                <element inactive_on_update="false" label="Earned Leave" value="earned_leave"/>
+                <element inactive_on_update="false" label="Sick Leave" value="sick_leave"/>
+                <element inactive_on_update="false" label="Flexi Leave" value="flexi_leave"/>
+            </choice>
+        </element>
+        <element label="Discussed with Supervisor" max_length="40" name="discussed" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="End Date" max_length="40" name="end_date" type="glide_date"/>
+    </element>
+</database>
