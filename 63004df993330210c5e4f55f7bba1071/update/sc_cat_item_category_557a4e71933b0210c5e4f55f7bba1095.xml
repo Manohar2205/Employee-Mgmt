@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="Apply Leave">8438467593f70210c5e4f55f7bba1053</sc_cat_item>
+        <sc_category display_value="Services">109f0438c6112276003ae8ac13e7009d</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-04 10:57:26</sys_created_on>
+        <sys_id>557a4e71933b0210c5e4f55f7bba1095</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Services.Apply Leave</sys_name>
+        <sys_package display_value="Employee Management" source="x_761472_emp_mgmt">63004df993330210c5e4f55f7bba1071</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_update_name>sc_cat_item_category_557a4e71933b0210c5e4f55f7bba1095</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-04 10:57:26</sys_updated_on>
+    </sc_cat_item_category>
+</record_update>

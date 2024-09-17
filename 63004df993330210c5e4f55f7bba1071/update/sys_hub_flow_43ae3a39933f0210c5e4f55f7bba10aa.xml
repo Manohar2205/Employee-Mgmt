@@ -2,13 +2,12 @@
     <sys_hub_flow action="INSERT_OR_UPDATE">
         <access>public</access>
         <acls/>
-        <active>false</active>
+        <active>true</active>
         <annotation/>
-        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=3700835000,viewActivatedIn=naturalLanguage</attributes>
         <authored_on_release_version>26000</authored_on_release_version>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
-        <compiler_build/>
         <copied_from/>
         <copied_from_name/>
         <description>Leave approval process for Employees</description>
@@ -16,15 +15,14 @@
         <flow_priority>MEDIUM</flow_priority>
         <generation_source/>
         <internal_name>leave_approval_process</internal_name>
-        <label_cache>[{"name":"Created_1.current","label":"Trigger - Record Created➛Leave Record","reference":"x_761472_emp_mgmt_leave","reference_display":"Leave","type":"reference","base_type":"reference","usedInstances":{"4e8bc06a-0848-4c55-95b5-dd00bf883875":["record"]},"attributes":{}}]</label_cache>
-        <latest_snapshot/>
-        <master_snapshot/>
+        <label_cache>[{"name":"Created_1.current.user.name","label":"Trigger - Record Created➛Leave Record➛Requested for➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name","usedInstances":{"11536870-c34c-4ff2-87c2-6a41ac8ccc1a":["comments"],"f7062035-a3db-4883-967e-78dd7a122979":["comments"]}},{"name":"4281a81b-31ea-43e6-913e-5aa79225f2ce.approval_state","label":"11 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"1fe70977-a416-46ea-964d-93db030524dc":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.user.manager","label":"Trigger - Record Created➛Leave Record➛Requested for➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager","usedInstances":{"4281a81b-31ea-43e6-913e-5aa79225f2ce":["approval_conditions"],"f7062035-a3db-4883-967e-78dd7a122979":["approver"],"11536870-c34c-4ff2-87c2-6a41ac8ccc1a":["approver"]}},{"name":"Created_1.current.status","label":"Trigger - Record Created➛Leave Record➛Status","reference":"","reference_display":"Status","type":"choice","base_type":"choice","parent_table_name":"x_761472_emp_mgmt_leave","column_name":"status","choices":[{"label":"-- None --","used":false,"image":"","reference":false,"rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"label":"Submitted","used":false,"image":"","reference":false,"rawLabel":"Submitted","selected":false,"missing":false,"value":"submitted","parameters":{"name":"x_761472_emp_mgmt_leave","dependent_values":[""]}},{"label":"Requested for Approval","used":false,"image":"","reference":false,"rawLabel":"Requested for Approval","selected":false,"missing":false,"value":"req_approval","parameters":{"name":"x_761472_emp_mgmt_leave","dependent_values":[""]}},{"label":"Approved","used":false,"image":"","reference":false,"rawLabel":"Approved","selected":false,"missing":false,"value":"approved","parameters":{"name":"x_761472_emp_mgmt_leave","dependent_values":[""]}},{"label":"Rejected","used":false,"image":"","reference":false,"rawLabel":"Rejected","selected":false,"missing":false,"value":"rejected","parameters":{"name":"x_761472_emp_mgmt_leave","dependent_values":[""]}}],"usedInstances":{"5826a9fd-8a06-4148-bc60-609e08be424d":["condition"],"374cc0ba-e7a0-4b9b-b044-c61e1d168f8e":["condition"]}},{"name":"Created_1.current.leave_type","label":"Trigger - Record Created➛Leave Record➛Leave type","reference":"","reference_display":"Leave type","type":"choice","base_type":"choice","parent_table_name":"x_761472_emp_mgmt_leave","column_name":"leave_type","choices":[{"label":"-- None --","used":false,"image":"","reference":false,"rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"label":"Casual Leave","used":false,"image":"","reference":false,"rawLabel":"Casual Leave","selected":false,"missing":false,"value":"casual_leave","parameters":{"name":"x_761472_emp_mgmt_leave","dependent_values":[""]}},{"label":"Earned Leave","used":false,"image":"","reference":false,"rawLabel":"Earned Leave","selected":false,"missing":false,"value":"earned_leave","parameters":{"name":"x_761472_emp_mgmt_leave","dependent_values":[""]}},{"label":"Flexi Leave","used":false,"image":"","reference":false,"rawLabel":"Flexi Leave","selected":false,"missing":false,"value":"flexi_leave","parameters":{"name":"x_761472_emp_mgmt_leave","dependent_values":[""]}},{"label":"Maternity Leave","used":false,"image":"","reference":false,"rawLabel":"Maternity Leave","selected":false,"missing":false,"value":"maternity_leave","parameters":{"name":"x_761472_emp_mgmt_leave","dependent_values":[""]}},{"label":"Sick Leave","used":false,"image":"","reference":false,"rawLabel":"Sick Leave","selected":false,"missing":false,"value":"sick_leave","parameters":{"name":"x_761472_emp_mgmt_leave","dependent_values":[""]}}],"usedInstances":{"b63f2860-3507-4e19-a3cc-1775e1a66c84":["condition"],"5826a9fd-8a06-4148-bc60-609e08be424d":["condition"],"374cc0ba-e7a0-4b9b-b044-c61e1d168f8e":["condition"],"b54f0a7b-5adf-4817-b1d4-3ec4f5969697":["condition"],"f7062035-a3db-4883-967e-78dd7a122979":["comments"],"77dbbd55-b382-4e1d-b105-1f8bef77ef2a":["parm2"],"35135f29-c0d9-4b81-84d8-138e0251c2a2":[null]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Leave Record","reference":"x_761472_emp_mgmt_leave","reference_display":"Leave","type":"reference","base_type":"reference","usedInstances":{"4e8bc06a-0848-4c55-95b5-dd00bf883875":["record"],"75b924a3-2804-4f12-8f89-385403494196":["record"],"36f4ed93-091e-442e-aa99-9863f757aa7f":["record"],"4281a81b-31ea-43e6-913e-5aa79225f2ce":["record"],"f2c8afe2-ef94-45a7-8008-112142689053":["record"],"f7062035-a3db-4883-967e-78dd7a122979":["sysapproval"],"52a1fb38-02bf-498a-8712-c061cd8ce3f9":["record"],"11536870-c34c-4ff2-87c2-6a41ac8ccc1a":["sysapproval"],"733ab94b-7867-4500-853f-429427611860":["record"],"35135f29-c0d9-4b81-84d8-138e0251c2a2":["record"]},"attributes":{}},{"name":"Created_1.current.user","label":"Trigger - Record Created➛Leave Record➛Requested for","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_761472_emp_mgmt_leave","column_name":"user","usedInstances":{"f7062035-a3db-4883-967e-78dd7a122979":["comments"]}},{"name":"f7062035-a3db-4883-967e-78dd7a122979.record","label":"10 - Create Record➛x_761472_emp_mgmt_leave_approval Record","reference":"x_761472_emp_mgmt_leave_approval","reference_display":"x_761472_emp_mgmt_leave_approval Record","type":"reference","base_type":"reference","usedInstances":{"8b67548a-f627-477a-b36c-4ecb573010e4":["record"],"77dbbd55-b382-4e1d-b105-1f8bef77ef2a":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"f7062035-a3db-4883-967e-78dd7a122979.record.approver","label":"10 - Create Record➛x_761472_emp_mgmt_leave_approval Record➛Approver","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_761472_emp_mgmt_leave_approval","column_name":"approver","usedInstances":{"8b67548a-f627-477a-b36c-4ecb573010e4":["ah_to"]}},{"name":"52a1fb38-02bf-498a-8712-c061cd8ce3f9.record.user","label":"10 - Update Record➛Leave Record➛Requested for","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_761472_emp_mgmt_leave","column_name":"user","usedInstances":{"8b67548a-f627-477a-b36c-4ecb573010e4":["ah_cc"]}},{"name":"f7062035-a3db-4883-967e-78dd7a122979.record.approver.first_name","label":"10 - Create Record➛x_761472_emp_mgmt_leave_approval Record➛Approver➛First name","reference":"","reference_display":"First name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"first_name","usedInstances":{"8b67548a-f627-477a-b36c-4ecb573010e4":[null]}},{"name":"Created_1.current.number","label":"Trigger - Record Created➛Leave Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_761472_emp_mgmt_leave","column_name":"number","usedInstances":{"77dbbd55-b382-4e1d-b105-1f8bef77ef2a":["parm1"],"11536870-c34c-4ff2-87c2-6a41ac8ccc1a":["values","comments"],"f7062035-a3db-4883-967e-78dd7a122979":["comments"],"35135f29-c0d9-4b81-84d8-138e0251c2a2":[null,"ah_subject"]}},{"name":"Created_1.current.user.email","label":"Trigger - Record Created➛Leave Record➛Requested for➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{"35135f29-c0d9-4b81-84d8-138e0251c2a2":["ah_to"]}},{"name":"Created_1.current.user.manager.email","label":"Trigger - Record Created➛Leave Record➛Requested for➛Manager➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{"35135f29-c0d9-4b81-84d8-138e0251c2a2":["ah_cc"]}},{"name":"Created_1.current.user.first_name","label":"Trigger - Record Created➛Leave Record➛Requested for➛First name","reference":"","reference_display":"First name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"first_name","usedInstances":{"35135f29-c0d9-4b81-84d8-138e0251c2a2":[null]}}]</label_cache>
+        <master_snapshot>3559d0da937b8210c5e4f55f7bba1070</master_snapshot>
         <master_snapshot_digest/>
         <name>Leave Approval process</name>
         <natlang/>
         <outputs/>
         <pre_compiled>false</pre_compiled>
-        <remote_trigger_id/>
+        <remote_trigger_id>ce59d0da937b8210c5e4f55f7bba10bf</remote_trigger_id>
         <run_as>system</run_as>
         <run_with_roles/>
         <sc_callable>false</sc_callable>
@@ -38,7 +36,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>43ae3a39933f0210c5e4f55f7bba10aa</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_name>Leave Approval process</sys_name>
         <sys_overrides/>
         <sys_package display_value="Employee Management" source="x_761472_emp_mgmt">63004df993330210c5e4f55f7bba1071</sys_package>
@@ -46,12 +44,52 @@
         <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
         <sys_update_name>sys_hub_flow_43ae3a39933f0210c5e4f55f7bba10aa</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-08-04 15:21:35</sys_updated_on>
+        <sys_updated_on>2024-09-16 10:55:31</sys_updated_on>
         <type>flow</type>
         <version>2</version>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=43ae3a39933f0210c5e4f55f7bba10aa"/>
     <sys_variable_value action="delete_multiple" query="document_key=43ae3a39933f0210c5e4f55f7bba10aa"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_761472_emp_mgmt_leave">^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>false</on_update>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-05 16:00:12</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ce59d0da937b8210c5e4f55f7bba10bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-05 16:00:12</sys_updated_on>
+        <table>x_761472_emp_mgmt_leave</table>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>43ae3a39933f0210c5e4f55f7bba10aa</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-09-16 10:46:12</sys_created_on>
+        <sys_id>84446fe393e4d610c5e4f55f7bba1095</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-16 10:46:12</sys_updated_on>
+        <trigger display_value="">ce59d0da937b8210c5e4f55f7bba10bf</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=43ae3a39933f0210c5e4f55f7bba10aa^sys_idNOT IN84446fe393e4d610c5e4f55f7bba1095"/>
     <sys_hub_flow_stage action="delete_multiple" query="flow=43ae3a39933f0210c5e4f55f7bba10aa"/>
     <sys_flow_cat_variable_model action="delete_multiple" query="id=43ae3a39933f0210c5e4f55f7bba10aa^sys_idNOT IN4bae3a39933f0210c5e4f55f7bba10ac"/>
     <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
@@ -247,16 +285,16 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-08-04 15:21:34</sys_created_on>
         <sys_id>a2e64735937f0210c5e4f55f7bba1039</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-08-04 15:21:34</sys_updated_on>
+        <sys_updated_on>2024-08-05 16:00:00</sys_updated_on>
         <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
-        <trigger_inputs>H4sIAAAAAAAA/9VY227jNhD9FUFPLeACuthWnLetk0UDpAlqu+1DkAqUNLSF0pQrUUq8i/x7h7rYsi6+O8m+BDBJcc4cnjlD5um7yogDTL1WJ8RhoHZUnwsIOWGT5QJwWMhhm5O5nJsT7hERhEv1WoQxdNQg9CBUr/WOmhAWw3gZ3Xn4ES5Nv8g/V/Np/P1qW329axk2zBf2fDoXNgOSyBWeHy0YWf6VL7zPh92Zz7wQuHr99NxRFyTEfYWM+b0yJRCvvZGM8pCh9iUkl7pkYIDmmrppGJpmXHV1p286uuGZBDQN11WZqKQgGghZ5w+vArgHGIoSFkEDVyEQ75Gz5WrFDKnOyJqT18j/hrtfaXIdBczKhWzOnQW+C48L4Qc8G8kAZZMBi+f8IQMqSQRKYiYKEnEkjsD2YCGxyWh5aDqeBS+jItBXn6dp5JMscAlb/SJChL4TC4gk59RnyL6dkRAFcZjCHN0OH0c39t9fJsPfbkf26HY8Gd0NJ7c36luaj/1fLHfMEOZY7Cydt9XJf/WByZNKBWGnbHfUyA39hfjiCh/VkEF666xFOwy456fM1ITrFlPRpnDztIqT07RW7bqlzQv9/nP7R12r2eBxSh2WYaZK7fcJ8YC0KNWhJaWW028ALRqYKOe9TbP5yD6i7WrapWWbVdDRqp0HHrCb9XYqTk6nqGOfL2IhaXkhXES2CGzieXaJMLkUMe2ScZbb2069hjHHD+wV8XXVprSt+Lv3I4T7hHVXcJNuifP0Pt9yFHMlwBPCP4obh0iNUArLondzMs0ZpWNg4IrSadM/o/Kv3/0o8vm0hHoVNOWgFnMVDlWjFCllsaMTgz8fWbJ1fpMKb5XSPb5ui4NKa1bXKXWAGpolK1bXTIfqmqX1CPVMTXONUs3WIbZiFxVNXKR2Wyo3SmXH9hBZleEcpVbW/V6CSTbVVmQrxZAbxPA80PQzQTMktIrRmQc53UqV2fDNpji3pXbmvk68hOAX3r6Gt6fXURa8oMke4XMOcf+dhkHMvarxyD0VnyvrFcpPOX8/n9HzaBDCdgCbKz7I7dYMFxolfHkxnzOp7gygCxram4nO5vQGA8clBqVW3wJDr/jcGlwj4s/lbzt0lTQJs83rGiWSNCnrAJc7AWDN8Q4GeLrX5bpsdLps7sfwtJcZcBuhhjaTrlWztinzPSjmjq7rWpRkXcnnqu37HL+MTq8Gbk+3LNfCFwdWNu2CQ/Su0SMDq29e9SqVXYO3DbpoIOZd3iHRMkqBfLpn9CWlGYEQsrkc3nM5Xj/Tb0gWpNT3JPdKahxBqDwE/Je79TplDNjO0hfnuZrvPihws1C5LAwnELNa98fQv+L4Rmh5a2xh5SOfQhU9JJtpXegpBN2r3oCazUZCB01GsobYDv7zXBb2rIWktaqabg37SjtprJDWNn+EWCsqKff/LReUc5Gin50U43KkmCdfiopSbH3/HQP2B2pW6TXhlI4lY4Id0LJN3wQKTigYRPGpkv+vD5/zzlIRM0BKGd5+MaAio5/qz+V+UYeyUvD7Asnu07W+hcNKfh/60JZUOfX3eLmCZ5Fez2y53w6qL9cmmDuy+DwN6mD9J03ltLVLHbZvdc/GPlUS56Yg9uxAZ826uQ2dlnVjI9qV9ektZtu7uwHFJ20ez/8DpD9D2aseAAA=</trigger_inputs>
+        <trigger_inputs>H4sIAAAAAAAA/9VY227jNhD9FUFPLeACuthWnLetk0UDpBvUSduHIBUoaWgTpSlXopR4F/n3DnWxZV0cXzfZlwAmKc6ZwzNnyDx+0znxgOuX+gPxOOg9nQkJkSD8YbkAHJZq2BVkrubmRAREhtFSv5RRAj09jAKI9Euzp6eEJ3C/jG8C/AiXZl8Un+vFNP5+cZ2h2XcsF+YLdz6dS5cDSdWKgMULTpZ/FQtvi2F/xngQgdAvH596+oJEuK9UMb/VppgK7FOfjCwwfNu0LcswrIu+6Q1tz7QCm4Bh4Ib1fGtAZUva6yzhRYIIAENRwmNoYSQCEtwJvlytmCGhOSVz8hKzr7j7haHWUUDsPuRz/ixkPtwtJAtFPpIDyidDnszFlxyoogooSbgsqcKRJAY3gIXCpqIVoen9LHyelIE+M5GlUUzy0Cd89YtIGTEvkRArZinjyLGbkxCHSZTBnFyP7yZX7t+fHsa/XU/cyfX9w+Rm/HB9pb9m+bj/JWrHHGGBxc3TeV2d72cGXJ1UduxuxnZPj/2ILeQnXzI88xzSa28tzXEoApYx05CnX07Fm/Is0ipPzjA6FepXNi9V+s/1H01F5oP76XE4JCQA0qFHj1b0WE2yBZpsybea3TZlFiO7SLNvGOcWZ14nB2tzHgbAr9bb6Tg5naJamVgkUtHyTISMXRm6JAjcCmFqKWJ6S6x5bq9vqjJKBH7grohvajOjbcXfLYsR7iNWV8lNtiXO09tiy0kitBBPCP9ofhIhNVIrjYnezMm0YJTeAwdfVk6b/hlXf/3O4piJaQX1KmjGQSPmKhyqRitTymPHRwZ/OrAwm/ymNd5qBbp3dZompR5Qy3BUbZqG7VHTcIwBoYFtGL5Vqc4mmE6Usnb6Z6nSjhqNM4HxHeRU57JAaVQVvpM00k1dldmqYy+sYHwaaOaJoFkKWs3S7L08baW/fPhqU4bbUjtxnyZBSvCLYFdr29HVKA+f0U4PcDSP+P9OozARQd1i1J4aE9p6hfZTwd/PJ3Q3GkawHcDminfytTXDpUaJWJ7A0WxqeiPog4FGZqOHeYPRyPOJRakzdMAya462htGK7WM52RsKStsk2OVqrWJI2zS0h58dAbDhbXsDPN7VCgW2elo+92O41/MMhItQI5crf2qY2JSzAMq5gyu4ESVd1+yxVUwvRv7AdBzfwRcDVjHtg0fMvjUgI2doXwxqVdyAsg2mbCHhu7wj4mWcAflwj91zyjAGKVXL2L+TCrxUZt+QPEilmynutcwkwkj7EopfbtbrtHvAJpW9GE/VUndBgZtF2nlheKGcNXo6hv4VxzdCq7tgByvv+ZSp6SHdTOvopwz0LwYjardbBh21WcYaTDfMj3MF2FH1aWf9tN0FdhVx2loLnc37AFnW9FDt6luuHacixTw5Kdb5SLGPvuqURdf5fjsE7A/UlrILwTG9ScUEN6RVQ74KNZzQMIjGqFb8Vw6f495SkzNASjneaTGgpqIf68TVztCEslLw9wWS35IbHQqHteLm867Np3bqp315QuCQwcDuuLOO6i/PNkBv4P04rWhvpadthbO1H+23b33P1o5UkeHm0e/Ya06adXvDOS7r1pbzVtbHN5Nt7+YWFB+0TTz9D9ieMCQLHgAA</trigger_inputs>
         <trigger_outputs/>
         <trigger_type>record_create</trigger_type>
     </sys_hub_trigger_instance_v2>
-    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=43ae3a39933f0210c5e4f55f7bba10aa^sys_idNOT IN6ae64735937f0210c5e4f55f7bba103a"/>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=43ae3a39933f0210c5e4f55f7bba10aa^sys_idNOT IN2066efa793e4d610c5e4f55f7bba1019,2d7a5f9193c41210c5e4f55f7bba10c7,6ae64735937f0210c5e4f55f7bba103a,a866efa793e4d610c5e4f55f7bba1014,ad7a5f9193c41210c5e4f55f7bba10c5,c34950da937b8210c5e4f55f7bba10ee,e17a5f9193c41210c5e4f55f7bba10c7,f934ebe393e4d610c5e4f55f7bba10b9"/>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
         <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
         <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
@@ -266,22 +304,391 @@
         <display_text/>
         <flow display_value="Leave Approval process">43ae3a39933f0210c5e4f55f7bba10aa</flow>
         <generation_source/>
+        <order>8</order>
+        <parent_ui_id>374cc0ba-e7a0-4b9b-b044-c61e1d168f8e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-09-16 10:55:31</sys_created_on>
+        <sys_id>2066efa793e4d610c5e4f55f7bba1019</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-16 10:55:31</sys_updated_on>
+        <ui_id>733ab94b-7867-4500-853f-429427611860</ui_id>
+        <values>H4sIAAAAAAAA/+1UXWvbMBT9K0XPxthxmrZ5GwuBPayFbvSlK0KWbhKBLLv6SJOF/Pdd2XKatmsWQvcwmN50v845Vwfdb4gUZEyGILL8Kh/xIi+KQZYNLod5OSrKfCAKBpCThGhWAVYa4LUReF8y5UNgs/lsgDkQNE+5Nwa0224xL6RtFFvfxTKM8IVUAvNkfP+QkIYZnOjAkPHmVcqtG6CKlaCwcVJzX+HQsy8TnHEs2777tqf7mn7AwLuI06kMQUwFPnmWEFg50AIQbsaUhYRUTAvmarMmY2c8BlC1uNFqvatYSO06pRVbWfkT5w+zUDcDlMZ3W6glh5vGyVp3EcdK1Sdr5St93XENS4QZ88rtLdFboAKawC2gdVRm3xb1022PM5W6lRFpqZoztbsx54wsvQMb9g4KWvUVaxqp57Qx9VK2zUilSucKL+lM1U+IaeVcp4wH3ilugqVTjE/a8B0zMoj4imOweduKpo8+4HYyImHaam4F0/ZFsNRyIxv3CQcvIdLcJtGX5fmhl+ZXzw+7N/PZmyt6McqHFwMKVUOreeWoAraEt+58v/A0034PbM6uOzbHKnnR/I6yaNsXseja8w9z7eXfdm2E/sds+yezZoOD39Lek7b+tHtGtY45b3/4LCvQUY8UCaEk5PHGqQcqT7QqWl7h/33WISRHa+kHTCUoYX8jrvdqBKDLCLD7ZT/MsPkoa8//z/aUz/bhF14NjQ4GCAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Fire Event">80a30edeff30311077a95dac793bf19b</action_type>
+        <action_type_parent display_value="Fire Event">15e10e5eff30311077a95dac793bf11e</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Leave Approval process">43ae3a39933f0210c5e4f55f7bba10aa</flow>
+        <generation_source/>
+        <order>12</order>
+        <parent_ui_id>b54f0a7b-5adf-4817-b1d4-3ec4f5969697</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-15 13:45:43</sys_created_on>
+        <sys_id>2d7a5f9193c41210c5e4f55f7bba10c7</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-16 10:55:31</sys_updated_on>
+        <ui_id>77dbbd55-b382-4e1d-b105-1f8bef77ef2a</ui_id>
+        <values>H4sIAAAAAAAA/+2W227bOBCGX0XQtWWIFCVKviua7aJAt11s2t4UhUCRQ5uFDq5EufEGefeSOthR3NiGkw12gb0xoBEP8/8zn0dfbl0l3IUbcxb4IEDKwA8Q8illSSgYp0mQSZSAO3NLVoBZCRsoddo9zNwNy1sbpCxMEA1REnCCMPJ5CESGoaRZxpDPuFkqVLPO2fbzsOMmpREiFKdQrNNiWeh5DmwDKVuv68oca3bwlcpFDaW7+PJ15q5Zbe7UULuL2wev9HYNac4yyM3Bf4EE84bb9M6VNu79zWp7RKq9xMTqe8dXtbDpoJkLNxpKAeY6yfIGZm7BSsF0VW/dha5bE6iBiQ9lvt2tWClz1cK9gkbVIJzrbaOhcLoMHL1i2mlWVZsLJwNH2hWuPfSmUX+bLAI8u5fIwm22TZ9rDUvVWI+se5Xi8GGtVWVscq0CluWPrq7ytijf97pttUCyNtdjtUykbSAVsLYybeKDCnm9qn7sLH+jys6R4WVecVPI8YlpXaus1dDYCrbq46GhffDdLyoJORQ25cL0hyqXqW0S1d1lUi/my9w8zGVe/TA5NmpZzhm3wuemCGz+xsSvuvBnVivrwh/mmE53qz6V6nsLb22nAPgBCCo9ygjxCAkzL8tI4HE/TBLmYywRdu8669PvrZXWWzWYkvZGmwUNr9VavzIpbGDQfzcbSOP+sXZkZN9+NXDTYfcou72V1I+wH4QeC0TmkTgOvCSi4NFYCMoQxglN5v2+u7tD6C6G6qrirfXfeXs1YnWGjj2Sg5CHwgamxHB6qsSeKvwcVP1u+6K/3qmyb8C1I+uqMICBAz1qHRRH2DqK0iXk9Jk/HZypa1N0pvV6EXgk4ixEOPBwQLlHEh57MQHzYxDCJIk55tFJeHpfTxF09A+d0X2jjcXdPDZ00oOhc2pMHe64jKiPNjXnfT9bzpU12Xwoc8CpexzH1kBTcJymIXKA046K2P+HqXi2eTJRP6Vi4vmLQJFgQmQUx16GmTD/1xExE8WPPYqIj02tcRAGT54oIj7aONm+UUxzFmgyUF6bkmsQKZrztjae63nZFhnUv5oeJ1ZfxsG1KWK5HBk4Q8q48c/xAgcdChxIaMbDBwrIZRQMQ+VVuXU65/rvsxqaKt9A4+jKYc7uqnvI+P8ZaHbZT4HZFedFYIlCP/F9LD0RxeARJLHHUBJ7GAcZEhEnOEqeDgs52mFy2kv4BCz9MLDddi4wD3Y8CzSnJR1Cgw+FPgJN+D80/2JoJIlIwCn1iGkB89kVmwlDIfSCUEhKBOVRjC6G5utP5JYFdR8QAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Leave Approval process">43ae3a39933f0210c5e4f55f7bba10aa</flow>
+        <generation_source/>
         <order>1</order>
         <parent_ui_id/>
         <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-08-04 15:21:34</sys_created_on>
         <sys_id>6ae64735937f0210c5e4f55f7bba103a</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-08-04 15:21:34</sys_updated_on>
+        <sys_updated_on>2024-09-16 10:48:56</sys_updated_on>
         <ui_id>4e8bc06a-0848-4c55-95b5-dd00bf883875</ui_id>
         <values>H4sIAAAAAAAA/+1UTW/bMAz9K4XOhmHHadrmViwIsMNaoBt66QpBlphEgGR7+kiTBfnvo2w5TdulC4LuMGC6iaQe36Me+LAhUpAxGYLI8qt8xIu8KAZZNrgc5uWoKPOBKBhAThJSMQ1YaYDXRuB9yZQPgc3mkwHmQNA85d4YqNx2i3khbaPY+j6WYYQvpBKYJ+OHx4Q0zCCiA0PGm1cpt26AKlaCwoeTmnuNoGefJ4hxLNv+9V1P9zX90APvIqJTGYKYCnzyLCGwclAJwHYzpiwkRLNKMFebNRk74zGAqsVtpda7ioWsXKdUs5WVPxF/mIW6GaA0vptCLTncNk7WVRdxrFR9slZeVzcd1zBEmDGv3N4QvQUqoAncQreOyuzron666/tMZdXKiLRUzZna3ZhzRpbegQ1zBwWtes2aRlZz2ph6KdvHSEWnc4WXdKbqJ+xp5bxKGQ+8U5wES6cYn7The2ZkEPEFYfDxthVNf/jQt5MRCdNWcyuYtj+CpZYb2bhrBF5CpLlNoi/L8/d+ml89f+we5rM3V/RilA8vBhR0Q/VcO6qALeGtOw8Xnmbab4HN2U3H5lglLx4fUBZt+yIWXXv+Ya69/Nuuja3/Mdv+yazZ4N21tPelrT/tnlGtY87b7z7LCmF9qaXDhfrWpofKTjQpml3h5j7r4JOjVfQAUwlK2N/I6l0aG9BlbLDbrx9m1XyUtef/mj1lzT7+Am+GSs4ACAAA</values>
     </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Leave Approval process">43ae3a39933f0210c5e4f55f7bba10aa</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>5826a9fd-8a06-4148-bc60-609e08be424d</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-09-16 10:55:31</sys_created_on>
+        <sys_id>a866efa793e4d610c5e4f55f7bba1014</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-16 10:55:31</sys_updated_on>
+        <ui_id>35135f29-c0d9-4b81-84d8-138e0251c2a2</ui_id>
+        <values>H4sIAAAAAAAA/+1a227bOBD9FcJPLWC5sixLdvLUbRC0QC9Aa3SxaAqBoiibrSSqFBXHGxjY9/2EBRb7Lfsp+yU71MW24ksU202dxg+GoSFnOJczMyTBT9cN5jVOGqbX0y3XN7Gtd4yOrveMft/t9H29Z/f1NvEazUaEQwozBSVcqO9LHKSKcH39QlAsqee0WyQVgkZyOoVxjyVxgCcfi2lAISMWeDDeOPn0udmIsQCJkorGyfWNITmJqRNglwbAeMZJGoJQ9OoMZNTVtuQeYDGkEr0vtb5phVoKvr1iEYcpIgwptfRmg15JGnkUFvVxkNBmI8SRhyUXkxkFjPfeRcGcMGKRBJHPk4QTBo5JkBxRREPMAjRmcoQwypdvNZS8q4T9Dip0DCXKp+AEojRiEWEeaJT5jTNC38WS8Sj3pMRuUDqVB2kYvc3NUm6nPk4DueD2NKGOR2Nlh1JMihSU9D+M+Ph9ud45izKLCwsCTnAw+8JSCuamYEgWqYBiMZfnZCopmbASDWjmxBDHMYuGTiz4JcsEg5phaxjAR8sP+Bj4EzaMWpgom1rgUdw6B/pZRv6IBVMGvgExwDzNHON8S5VOuYnVxdVcJwssTE2IYLF8DoIvaWHCtFmgvN3fhBvPnONjQeYc6VeObbVN23BoGDvhMJQO+OKSLmN9/cTtUmCgtEFvc23qWlJhXmNZgf4KrQB/eyfwDwDxMk+9HOtIFmrMAN/Tq4DfO9ALjbZG+vdBMwQwcXKQFrZli9+K8tuwrVuW61pu1+7MEdEnvme7voVt0pkjYAw1SYRYfHWymrQA8PYylIvM3hK3wPzsPDOvWVvLkvlVRILUo+jXUt1NFhRAdjmHTIvmKDZ2QnGORCQ5gtgFEyjcs5UVcV7W5QhLxBKUQLhaaMARK5Rf4GiiCU9RmCYSpkkYqeRHpReY+02NIoYF9WxlgB9E7uyaI93NVRPPEYZHjuSbNzktcJloZfGfTtFy5tRh2S6tPoCno2GZUjWMmuUjX7awyJyklFkkTmdz4uSbiKW8WSju+mMt7x4NWMiyKObJtStqvY0BpnolpoTUQS1EEg+3Q+8K1n2guIaRJeOLF8sWr0GxuV35P8L4O8C4vfHQRq1KUN0Kjvd4mqyiroZOJeMvN2DnbsJd94i7g8Fdd3OMSSWqSep+oUQuYO+1OrmhVeUwSkOXCiiBsPH7kLqgNIwjiDJ6HitvUG8ZtztK28t+4XZ/zBhn3ljloTXYt447hx+yucUb4+ob1erFvckCyC9SXe+QGCkNNcmiSUio4Fy64Iav2aB30bjIp9GXTP0bVuQm8WnOmcQ4QiTASVJOVpIcAKhSP2ZBcNFAiZwEdDae58UJnJQCFtFTGCc8AtgA6lkW3HJmZiUMZ7opUZnS5ej1te85UuAo8bkITyzf6ndt7Gum13Y10yS21ieWrfldgn3DxZSaxnRaWrJZeVgKIUwIjWUyX8Lx0ygLZwI6gaIKNlclo35wZmRLaYVO2T8Gd4vbWBVXUmeSJiHZS7MkHL8lizXmlVOyU0ZGHPD45rRCq3LuQLAh7CyRVtzWoqJIohxuQ3mK8vJZDM/J7+m3lCZqKnhvgX7OBJy2FeprmZLAiVyWM9dpk0t4pkTUEImF4OP6ccoKr0YgbeRdmSor/ff3X2v0XCC0Wq0D0+huvoXiWEpfCPS2i0B1lzxCc+guZ7zjY4I96tTJTlUIFjVeKw1FfKG4qHsmRr3bXJ0XTS1vBxqDRFrBsbreRjyrtkVU/viztsNyB93NqQsE1CxIcTEhulPTWWo5W8r5jadidfuquGs8gi2oBnRCT1As6CmU9YCLEySG7pNLLJ5oWsTHWkZ0VAnUtFiwEItJE7WtJjI68LOfPp15Oq9cB9Yte8TvdbFhanbbbGtm2+hoLunYWrtn9jq2rvu6230A3XJ/ZjyKbvk2O2kcO+JP3RGLIN9DN6yTfcdueLMbrj3lz7awB9QnbF/dzuq6Rsy+oZm6Dxseo+1pxNbtTtc1ux61HkCf2J8Zj6JP5GR1y3PsFT91r1gI9D30izpZeOwXNwhNRKMvfKKeEAg04gHz8KS1ju3HnrDW+XDvR6rBCEdfk3tywvJVfiE3H37J/v1nf017P330YNrYsXn8xM3jePV28M1j7dVb/llWrjXD6sasUtwe1kXZsZYea+lDqaXHS5vDrqP3dWlzrFnHmvVQatbx8uDg69ZOlwf55y17xHWm/+Az/2rdt35H93Lw5nX5iq7Ga6vZy9H8rdXS46vi/dxIhsH89Zy948tRq9vtWI/y/RzEcewZnuBxXNi20/PRz/8DUlhF9Rs7AAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Leave Approval process">43ae3a39933f0210c5e4f55f7bba10aa</flow>
+        <generation_source/>
+        <order>10</order>
+        <parent_ui_id>b54f0a7b-5adf-4817-b1d4-3ec4f5969697</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-15 13:45:43</sys_created_on>
+        <sys_id>ad7a5f9193c41210c5e4f55f7bba10c5</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-16 10:55:31</sys_updated_on>
+        <ui_id>f7062035-a3db-4883-967e-78dd7a122979</ui_id>
+        <values>H4sIAAAAAAAA/91UwW6cMBD9FeQzQrBsSbK3KtXemlRtlUuaWAYPiyVjiG02S1f8e8cY0jQN0ipqDy03j5/nvTczzO2RCE42JEsgfneRZEWapOkqjlfn6yTP0jxZ8ZQBrElIFKsBkZblEuh4CMmeyc4FD/QsS9ZnKwp1S+tdbakEtgfK2lY3CEIoF6aVrL85/UVRCck1KLK5vQtJyzRyWtBkc3xxZfsWqGQ5SEz81ekLrry+U7398njBq2N5GWs0d4LikMDBguKAfCWTBkJSM8WZbXRPNlZ3GNDA+LWS/ROiEspiQuKwByO+Y/bz2OFKQGsF+LuiakQB160VjfKRUcF02ciuVlderSsylKyTdi4yRjoDlEPrtDm2ibr8UjWPn2eirVCjjelSNgXWfz4xa7XIOwvGFR4k1JiI1tgnoXbUNUuMj1FLHe0kHqJSNo9IasRORaxwwiMsBYu2GP8whm+YFs7FR0yDj4fRNX3oHK/3MSmm3jQCTKFFa99juj1M4oZwnl4O8cVih5P8Z0fHgTXPJtfPG+hvXRyn/Hi8xDZZ4DSJik5jdWyEFdQRdpPtQA/DvenNPKOLbxzMYsgDNDwgJwLusUSuesbHP+HEGwgmBYGtIAjGn+A1Faqrc8cflI0OFmU6l8Pw+9/2n7p844bAlSMxb+CrE548Q3OCrQDJzStDNa+IiYDuJ4JpTSR/ak0kWTx+f3lZeEH/2K54tp8XtsbdD8m3Ovb1BgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment>Flexi leaves will be Auto approved.</comment>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Leave Approval process">43ae3a39933f0210c5e4f55f7bba10aa</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>5826a9fd-8a06-4148-bc60-609e08be424d</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-05 16:00:00</sys_created_on>
+        <sys_id>c34950da937b8210c5e4f55f7bba10ee</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-16 10:48:56</sys_updated_on>
+        <ui_id>75b924a3-2804-4f12-8f89-385403494196</ui_id>
+        <values>H4sIAAAAAAAA/+1UXWvbMBT9K0XPxthxmrZ5KwuBPayFbvSlK0KWbhKBLHv6SJOF/Pdd2XKatksXQvcwmN50P8495+qghw2RgozJEESWX+UjXuRFMciyweUwL0dFmQ9EwQBykhDNKsBKA7w2Au9LpnwIbDafDDAHguYp98aAdtst5oW0jWLr+1iGEb6QSmCejB8eE9Iwg4gODBlvXqXcugGqWAkKGyc19xWCnn2eIMaxbPvuu57ua/phBt5FRKcyBDEV+ORZQmDlQAvAcTOmLCSkYlowV5s1GTvjMYCqxa1W613FQmrXKa3YysqfiD/MQt0MUBrfbaGWHG4bJ2vdRRwrVZ+sla/0Tcc1LBFmzCu3t0RvgQpoArcwraMy+7qon+76OVOpWxmRlqo5U7sbc87I0juwYe+goFVfsaaRek4bUy9l24xUqnSu8JLOVP2EM62c65TxwDvFTbB0ivFJG75nRgYRXxAGm7etaPrDh7mdjEiYtppbwbR9ESy13MjGXSPwEiLNbRJ9WZ6/99L86vlh9zCfvbmiF6N8eDGgUDW0mleOKmBLeOvOw4WnmfZbYHN207E5VsmL5gPKom1fxKJrzz/MtZd/27Vx9D9m2z+ZNRu8+y3tPWnrT7tnVOuY8/a7z7JCIBmUA+KtSw9UnWhRtLrCf/usQ0+O1tADTCUoYX8jqvdoHECXccDud/0wo+ajrD3/P9lTPtnHX+mvvlj+BwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Leave Approval process">43ae3a39933f0210c5e4f55f7bba10aa</flow>
+        <generation_source/>
+        <order>11</order>
+        <parent_ui_id>b54f0a7b-5adf-4817-b1d4-3ec4f5969697</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-15 13:45:43</sys_created_on>
+        <sys_id>e17a5f9193c41210c5e4f55f7bba10c7</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-16 10:55:31</sys_updated_on>
+        <ui_id>52a1fb38-02bf-498a-8712-c061cd8ce3f9</ui_id>
+        <values>H4sIAAAAAAAA/+1UXWvbMBT9K0XPxthxmrZ5GwuBPayFbvSlK0KWbhKBLLv6SJOF/Pdd2XKatmsWQvcwmN50v845Vwfdb4gUZEyGILL8Kh/xIi+KQZYNLod5OSrKfCAKBpCThGhWAVYa4LUReF8y5UNgs/lsgDkQNE+5Nwa0224xL6RtFFvfxTKM8IVUAvNkfP+QkIYZnOjAkPHmVcqtG6CKlaCwcVJzX+HQsy8TnHEs2777tqf7mn7AwLuI06kMQUwFPnmWEFg50AIQbsaUhYRUTAvmarMmY2c8BlC1uNFqvatYSO06pRVbWfkT5w+zUDcDlMZ3W6glh5vGyVp3EcdK1Sdr5St93XENS4QZ88rtLdFboAKawC2gdVRm3xb1022PM5W6lRFpqZoztbsx54wsvQMb9g4KWvUVaxqp57Qx9VK2zUilSucKL+lM1U+IaeVcp4wH3ilugqVTjE/a8B0zMoj4imOweduKpo8+4HYyImHaam4F0/ZFsNRyIxv3CQcvIdLcJtGX5fmhl+ZXzw+7N/PZmyt6McqHFwMKVUOreeWoAraEt+58v/A0034PbM6uOzbHKnnR/I6yaNsXseja8w9z7eXfdm2E/sds+yezZoOD39Lek7b+tHtGtY45b3/4LCvQUY8UCaEk5PHGqQcqT7QqWl7h/33WISRHa+kHTCUoYX8jrvdqBKDLCLD7ZT/MsPkoa8//z/aUz/bhF14NjQ4GCAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Leave Approval process">43ae3a39933f0210c5e4f55f7bba10aa</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>374cc0ba-e7a0-4b9b-b044-c61e1d168f8e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-09-16 10:46:02</sys_created_on>
+        <sys_id>f934ebe393e4d610c5e4f55f7bba10b9</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-16 10:55:31</sys_updated_on>
+        <ui_id>11536870-c34c-4ff2-87c2-6a41ac8ccc1a</ui_id>
+        <values>H4sIAAAAAAAA/+VUTW+cMBD9K8hnhGDZkmRvVas9tUnVVrmkiWXwwFoyhthms3TFf+8YQ5omu9Gqag9VffP4zbw3H56bPRGcrEiWQPzmIsmKNEnTRRwvzpdJnqV5suApA1iSkChWAyItyyXQ8RKSLZOdM+7oWZYszxYU6pbWVW2pBLYFytpWNwhCKBemlay/Pt2j2AjJNSiyurkNScs0clrQZLV/9mT7FqhkOUgM/NXpCy69vlNz+8X5SK6O5bmt0dwJikMCOwuKA/KVTBoISc0UZ7bRPVlZ3aFBA+NXSvaPiI1QFgMSh90Z8R2jn8cOVwKmVoB/KzaNKOCqtaJR3jIqmB4b2dXq0qt1RYaSddLORUZLZ4ByaJ02xzZRl182zcPnmWgt1JjG9CibAus/35i1WuSdBeMKDxJqDERr7JNQFXXNEqMzaqmjSuIlKmXzgKRGVCpihRMeYSlYtEb7+9F8zbRwWXzEMOg8jFnT+87x+jwmxdQnjQBTaNHatxhuC5O4IZynl0N8cbTDSf6zo+PAmieTu9+/w8ZY4DSJik5jPWykujoHPQx3fhhBf+viOOWHoFheHWGrWTU6mN7MA3zUx8EsmjxAwz0KQsAd1s+V1nj7J/wOBoJJQfDBfY7gNbFB2eiDgFGiS38YXn7D/y3939wpuKQkxg182cKTp24OsBYguTkwhvNSmQjodiKYFkvypxZLksXj+cvrxQv6x7bLk41+ZM/c/gBjVIdyJwcAAA==</values>
+    </sys_hub_action_instance_v2>
     <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=43ae3a39933f0210c5e4f55f7bba10aa"/>
-    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=43ae3a39933f0210c5e4f55f7bba10aa"/>
-    <sys_hub_pill_compound action="delete_multiple" query="attached_to=43ae3a39933f0210c5e4f55f7bba10aa"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=43ae3a39933f0210c5e4f55f7bba10aa^sys_idNOT IN4f4950da937b8210c5e4f55f7bba10ed,4f4950da937b8210c5e4f55f7bba10ef,5d82205a93bb8210c5e4f55f7bba10a8,6d7a5f9193c41210c5e4f55f7bba10c8,9582205a93bb8210c5e4f55f7bba10ab"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">474950da937b8210c5e4f55f7bba10ed</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Leave Approval process">43ae3a39933f0210c5e4f55f7bba10aa</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-05 16:00:00</sys_created_on>
+        <sys_id>4f4950da937b8210c5e4f55f7bba10ed</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-16 10:55:31</sys_updated_on>
+        <ui_id>5826a9fd-8a06-4148-bc60-609e08be424d</ui_id>
+        <values>H4sIAAAAAAAA/+VUyW7bMBD9FUNnQ9ASG01uQQoDBdoGaIxc2pQYkSObKEWqXLzU8L93qCUJEhstivbUm/hmeW82HRITfBu8W5pr5+RKJ1efH6aJ1BGj70OiocHkKuFGC+ml0awDpskGVIiG5b7FiXSThZK4k2QQ0rUK9vfn7HwtlbA4MLVgKZ9Hm1wdXpg8RTIFFSpKc+et1CsKl4JedQZ1fslzXhbzssiy4s1FXs3LKi9ECQgl+Y2BN6PwyfsOmZ6tKPIR7kYmY0WUlWfTBHcetUCirkE5nCYNaAHe2P0jYhHErVZPwFpqT+mS6Lxz8gflLmaz6Fgj1cixN/K1kRxv26ikRzxUajQaFRr9sRcce4s1BOXH3hISHDKBbVQX6Qbu+m5ttp9GooXUXSWDURkO6vEFnuqtgkcXJ4AKG0rEGmhb6gJrrdnILpi0NOlK0SOtldkSaVyXFHgUnlIzIF0Q/raD78HKWMUHSkPBvcwKnOSsWy1K5y2VcOzawb6HKKgvcCiF9d0gB8etbP018WxwUH2cvt7LZyt5ONzQNDwKlqc8WOqBTxXCBlkc8fH4JWRZKWpF+8g6/OupCOfBBzd6u1A10pPH6w3/13R/42AuYVbP8mx2+mAu5qcO5sSpnL+S4hdXEsf9m0eSZdl/eiXSsX7bh9o68j8+kod4ET2D6xdEIJeOhCwj9m78x0fDniYt+XNoa+y3WMITdvwJpGNwCi0GAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">474950da937b8210c5e4f55f7bba10ef</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Leave Approval process">43ae3a39933f0210c5e4f55f7bba10aa</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <parent_ui_id>5826a9fd-8a06-4148-bc60-609e08be424d</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-05 16:00:00</sys_created_on>
+        <sys_id>4f4950da937b8210c5e4f55f7bba10ef</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-16 10:55:31</sys_updated_on>
+        <ui_id>4661bbf4-e51c-4560-bec4-436ebafea920</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">5982205a93bb8210c5e4f55f7bba109b</block>
+        <comment/>
+        <connected_to>5826a9fd-8a06-4148-bc60-609e08be424d</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Leave Approval process">43ae3a39933f0210c5e4f55f7bba10aa</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-05 16:40:18</sys_created_on>
+        <sys_id>5d82205a93bb8210c5e4f55f7bba10a8</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-16 10:55:31</sys_updated_on>
+        <ui_id>374cc0ba-e7a0-4b9b-b044-c61e1d168f8e</ui_id>
+        <values>H4sIAAAAAAAA/+VUy27TQBT9FeS1ZdkOrSC7qqgSElCJVt1AGV3PXCcjxjNmHklN5H/njh9JRFOBuuimO8+5j3Puy7vEBN8G727NhXNypZPlt/s0kTpi9L1LNDSYLBNutJBeGs0GIE02oEI00KeQrlXQ3R0QvpZKWJyytWApxqNNlru/TL5rkSmoUFHgjbdSryhcCnrVOdTFe17wRXm+KPO8fPe2qM4XVVGKBSCU5DcHXs7i3nwakPRJ1ZGPcDczGSuirCJPE3zwqAUSdQ3KYZo0oAV4Y7s9YhHEtVYHYC21Hytu4MHJ35S7PDuLjjVSjXzfDiM5XrdRyYh4qNRsNCo0+ssoOHYTawjKH3UzOGQC26gu0k3c9c3abL/ORFdSD5VMRmU4qP0LPNVbBY8uTgAVNpSINdC21AXWWrORQzBpabKVokdWK7Ml0rgSGfAoPKNmQHZF+IcBvgMrYxWfKQ0FjzIrcJKzYX0onbdUQj+0g/0KUdBY4FQKG7tBDo5b2foL4tngpLpPH+/e0drtdpc0DY+CFRkPlnrgM4WwQRZH3PffQ54vREMeVkvfscH241SU8+CDmyNcqBrpyePxXr8E5QscTnHqcE6czNPXUv7jWuLY//NY8jx/pdciHRu3fqptIH/2sdzHyxgZ3LggArl0JOQ2Yh/n/3k0dDRpyY+hrbE/YwkHrP8DDUg+ExkGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">e17a5f9193c41210c5e4f55f7bba10c8</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Leave Approval process">43ae3a39933f0210c5e4f55f7bba10aa</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>13</order>
+        <outputs_assigned/>
+        <parent_ui_id>b54f0a7b-5adf-4817-b1d4-3ec4f5969697</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-15 13:45:43</sys_created_on>
+        <sys_id>6d7a5f9193c41210c5e4f55f7bba10c8</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-16 10:55:31</sys_updated_on>
+        <ui_id>d8285bc0-2f51-4116-b7cc-1f5668dc763b</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">9d82205a93bb8210c5e4f55f7bba10aa</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Leave Approval process">43ae3a39933f0210c5e4f55f7bba10aa</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>9</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-05 16:40:18</sys_created_on>
+        <sys_id>9582205a93bb8210c5e4f55f7bba10ab</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-16 10:55:31</sys_updated_on>
+        <ui_id>b54f0a7b-5adf-4817-b1d4-3ec4f5969697</ui_id>
+        <values>H4sIAAAAAAAA/+VVy27bMBD8FVdnQdAjNprcjBQGCjQJ2gS5tAmxIlc2UYpUScqPGv73LvVIgsZB06LopTdxlruzs9yB9pFpfdN6d2Pmzsmljs4+38WR1AGj732kocboLOJGC+ml0awD4mgNqg2BuVITv2vQTXDLsfGThcKtnIAWkwvwaLX0O7oupGsU7G5/L4uvpBIWh64asMRN0ehs/1Mo1GIKSlRU/NpbqZeULgWdqhSq7JRnvMhnRZ6m+duTrJwVZZaLAhAKujcmno8iJx86JH5RfeAj3I1MxorQVpbGEW49aoFEXYFyGEc1qQJv7O4BsQjiSqtHYCW1p3JRuLx18jvVzqfTcLFC0sixD/KVkRyvmtBJj3go1Rg0qq31Zd9wmDhW0Co/TpyQ1iET2ITuAt3AXV2vzObTSLSQulMyBJXhoB5O4Elv2Xp04QVQYU2FWA1NQ1NgjTVr2SVTL3WyVHRIKmU2RBpWKwEeGk9oGJAsCH/XwbdgZVBxQWUouW+zBCc569aQynlLEg7dONi3NjTUCxyksH4adMFxKxs/J541Dl0f4uc7/GR99/tzeg2PgmUJby3NwCcKYY0sPPHh8OZLm6aFqMJ6si5wf/nxlUn1uMl94nMX/Fvyv2GmU5hW0yydHjfTyeyYmY7Y6GUH5b9wUFiFVxooTdP/1EHSsd4Jg7aO/I8NdBfc0jO4fkEEcumokZuAvR//FSGwo5eW/Cm0MfZrkPCIHX4AaIZu3nUGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=43ae3a39933f0210c5e4f55f7bba10aa^sys_idNOT IN2866efa793e4d610c5e4f55f7bba101f,6466efa793e4d610c5e4f55f7bba1020,7d7a5f9193c41210c5e4f55f7bba10e7,a066efa793e4d610c5e4f55f7bba1020,ec66efa793e4d610c5e4f55f7bba101f"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>43ae3a39933f0210c5e4f55f7bba10aa</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.user.first_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-09-16 10:55:31</sys_created_on>
+        <sys_id>2866efa793e4d610c5e4f55f7bba101f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-16 10:55:31</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>9d76a8b6-1904-49c6-801f-61626c7dab1e</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>43ae3a39933f0210c5e4f55f7bba10aa</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.leave_type}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-09-16 10:55:31</sys_created_on>
+        <sys_id>6466efa793e4d610c5e4f55f7bba1020</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-16 10:55:31</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>7f980600-c492-40f7-921d-c70735b45de6</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>43ae3a39933f0210c5e4f55f7bba10aa</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{f7062035-a3db-4883-967e-78dd7a122979.record.approver.first_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-15 13:45:43</sys_created_on>
+        <sys_id>7d7a5f9193c41210c5e4f55f7bba10e7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-15 13:45:43</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>85d548ea-68c8-4bc7-b744-7d492f977d7f</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>43ae3a39933f0210c5e4f55f7bba10aa</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-09-16 10:55:31</sys_created_on>
+        <sys_id>a066efa793e4d610c5e4f55f7bba1020</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-16 10:55:31</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>8cf85a24-7141-4123-bc37-18483700f0b5</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>43ae3a39933f0210c5e4f55f7bba10aa</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.user.first_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-09-16 10:55:31</sys_created_on>
+        <sys_id>ec66efa793e4d610c5e4f55f7bba101f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-16 10:55:31</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>6f6957af-4d1b-44c7-9c67-f5caf2baee42</ui_id>
+    </sys_hub_pill_compound>
     <sys_hub_flow_variable action="delete_multiple" query="model=43ae3a39933f0210c5e4f55f7bba10aa"/>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_43ae3a39933f0210c5e4f55f7bba10aa^sys_idNOT IN22e64735937f0210c5e4f55f7bba1036,eae64735937f0210c5e4f55f7bba1032"/>
     <sys_documentation action="INSERT_OR_UPDATE">
@@ -333,6 +740,637 @@
     <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_43ae3a39933f0210c5e4f55f7bba10aa"/>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_43ae3a39933f0210c5e4f55f7bba10aa"/>
     <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_43ae3a39933f0210c5e4f55f7bba10aa"/>
-    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=43ae3a39933f0210c5e4f55f7bba10aa"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Leave approval process for Employees</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>leave_approval_process</internal_name>
+        <label_cache>[{"name":"Created_1.current.user.name","label":"Trigger - Record Created➛Leave Record➛Requested for➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name","usedInstances":{"11536870-c34c-4ff2-87c2-6a41ac8ccc1a":["comments"]}},{"name":"4281a81b-31ea-43e6-913e-5aa79225f2ce.approval_state","label":"11 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"1fe70977-a416-46ea-964d-93db030524dc":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.user.manager","label":"Trigger - Record Created➛Leave Record➛Requested for➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager","usedInstances":{"4281a81b-31ea-43e6-913e-5aa79225f2ce":["approval_conditions"],"f7062035-a3db-4883-967e-78dd7a122979":["approver"],"11536870-c34c-4ff2-87c2-6a41ac8ccc1a":["approver"]}},{"name":"Created_1.current.status","label":"Trigger - Record Created➛Leave Record➛Status","reference":"","reference_display":"Status","type":"choice","base_type":"choice","parent_table_name":"x_761472_emp_mgmt_leave","column_name":"status","choices":[{"label":"-- None --","used":false,"image":"","reference":false,"rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"label":"Submitted","used":false,"image":"","reference":false,"rawLabel":"Submitted","selected":false,"missing":false,"value":"submitted","parameters":{"name":"x_761472_emp_mgmt_leave","dependent_values":[""]}},{"label":"Requested for Approval","used":false,"image":"","reference":false,"rawLabel":"Requested for Approval","selected":false,"missing":false,"value":"req_approval","parameters":{"name":"x_761472_emp_mgmt_leave","dependent_values":[""]}},{"label":"Approved","used":false,"image":"","reference":false,"rawLabel":"Approved","selected":false,"missing":false,"value":"approved","parameters":{"name":"x_761472_emp_mgmt_leave","dependent_values":[""]}},{"label":"Rejected","used":false,"image":"","reference":false,"rawLabel":"Rejected","selected":false,"missing":false,"value":"rejected","parameters":{"name":"x_761472_emp_mgmt_leave","dependent_values":[""]}}],"usedInstances":{"5826a9fd-8a06-4148-bc60-609e08be424d":["condition"],"374cc0ba-e7a0-4b9b-b044-c61e1d168f8e":["condition"]}},{"name":"Created_1.current.leave_type","label":"Trigger - Record Created➛Leave Record➛Leave type","reference":"","reference_display":"Leave type","type":"choice","base_type":"choice","parent_table_name":"x_761472_emp_mgmt_leave","column_name":"leave_type","choices":[{"label":"-- None --","used":false,"image":"","reference":false,"rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"label":"Casual Leave","used":false,"image":"","reference":false,"rawLabel":"Casual Leave","selected":false,"missing":false,"value":"casual_leave","parameters":{"name":"x_761472_emp_mgmt_leave","dependent_values":[""]}},{"label":"Earned Leave","used":false,"image":"","reference":false,"rawLabel":"Earned Leave","selected":false,"missing":false,"value":"earned_leave","parameters":{"name":"x_761472_emp_mgmt_leave","dependent_values":[""]}},{"label":"Flexi Leave","used":false,"image":"","reference":false,"rawLabel":"Flexi Leave","selected":false,"missing":false,"value":"flexi_leave","parameters":{"name":"x_761472_emp_mgmt_leave","dependent_values":[""]}},{"label":"Maternity Leave","used":false,"image":"","reference":false,"rawLabel":"Maternity Leave","selected":false,"missing":false,"value":"maternity_leave","parameters":{"name":"x_761472_emp_mgmt_leave","dependent_values":[""]}},{"label":"Sick Leave","used":false,"image":"","reference":false,"rawLabel":"Sick Leave","selected":false,"missing":false,"value":"sick_leave","parameters":{"name":"x_761472_emp_mgmt_leave","dependent_values":[""]}}],"usedInstances":{"b63f2860-3507-4e19-a3cc-1775e1a66c84":["condition"],"5826a9fd-8a06-4148-bc60-609e08be424d":["condition"],"374cc0ba-e7a0-4b9b-b044-c61e1d168f8e":["condition"],"b54f0a7b-5adf-4817-b1d4-3ec4f5969697":["condition"],"f7062035-a3db-4883-967e-78dd7a122979":["comments"],"77dbbd55-b382-4e1d-b105-1f8bef77ef2a":["parm2"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Leave Record","reference":"x_761472_emp_mgmt_leave","reference_display":"Leave","type":"reference","base_type":"reference","usedInstances":{"4e8bc06a-0848-4c55-95b5-dd00bf883875":["record"],"75b924a3-2804-4f12-8f89-385403494196":["record"],"36f4ed93-091e-442e-aa99-9863f757aa7f":["record"],"4281a81b-31ea-43e6-913e-5aa79225f2ce":["record"],"f2c8afe2-ef94-45a7-8008-112142689053":["record"],"f7062035-a3db-4883-967e-78dd7a122979":["sysapproval"],"52a1fb38-02bf-498a-8712-c061cd8ce3f9":["record"],"11536870-c34c-4ff2-87c2-6a41ac8ccc1a":["sysapproval"]},"attributes":{}},{"name":"Created_1.current.user","label":"Trigger - Record Created➛Leave Record➛Requested for","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_761472_emp_mgmt_leave","column_name":"user","usedInstances":{"f7062035-a3db-4883-967e-78dd7a122979":["comments"]}},{"name":"f7062035-a3db-4883-967e-78dd7a122979.record","label":"8 - Create Record➛x_761472_emp_mgmt_leave_approval Record","reference":"x_761472_emp_mgmt_leave_approval","reference_display":"Leave Approval","type":"reference","base_type":"reference","usedInstances":{"8b67548a-f627-477a-b36c-4ecb573010e4":["record"],"77dbbd55-b382-4e1d-b105-1f8bef77ef2a":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"f7062035-a3db-4883-967e-78dd7a122979.record.approver","label":"8 - Create Record➛x_761472_emp_mgmt_leave_approval Record➛Approver","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_761472_emp_mgmt_leave_approval","column_name":"approver","usedInstances":{"8b67548a-f627-477a-b36c-4ecb573010e4":["ah_to"]}},{"name":"52a1fb38-02bf-498a-8712-c061cd8ce3f9.record.user","label":"8 - Update Record➛Leave Record➛Requested for","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_761472_emp_mgmt_leave","column_name":"user","usedInstances":{"8b67548a-f627-477a-b36c-4ecb573010e4":["ah_cc"]}},{"name":"f7062035-a3db-4883-967e-78dd7a122979.record.approver.first_name","label":"8 - Create Record➛x_761472_emp_mgmt_leave_approval Record➛Approver➛First name","reference":"","reference_display":"First name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"first_name","usedInstances":{"8b67548a-f627-477a-b36c-4ecb573010e4":[null]}},{"name":"Created_1.current.number","label":"Trigger - Record Created➛Leave Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_761472_emp_mgmt_leave","column_name":"number","usedInstances":{"77dbbd55-b382-4e1d-b105-1f8bef77ef2a":["parm1"],"11536870-c34c-4ff2-87c2-6a41ac8ccc1a":["values","comments"]}}]</label_cache>
+        <master>true</master>
+        <name>Leave Approval process</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Leave Approval process">43ae3a39933f0210c5e4f55f7bba10aa</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-05 16:00:11</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3559d0da937b8210c5e4f55f7bba1070</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-16 10:46:11</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=3559d0da937b8210c5e4f55f7bba1070"/>
+    <sys_variable_value action="delete_multiple" query="document_key=3559d0da937b8210c5e4f55f7bba1070"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=3559d0da937b8210c5e4f55f7bba1070"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=3559d0da937b8210c5e4f55f7bba1070^sys_idNOT IN7559d0da937b8210c5e4f55f7bba1071"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>3559d0da937b8210c5e4f55f7bba1070</id>
+        <name>Leave Approval process</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-05 16:00:11</sys_created_on>
+        <sys_id>7559d0da937b8210c5e4f55f7bba1071</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-05 16:00:11</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=7559d0da937b8210c5e4f55f7bba1071"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=3559d0da937b8210c5e4f55f7bba1070^sys_idNOT IN7959d0da937b8210c5e4f55f7bba1072,8259d0da937b8210c5e4f55f7bba1081"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Leave Approval process">3559d0da937b8210c5e4f55f7bba1070</model>
+        <model_id>3559d0da937b8210c5e4f55f7bba1070</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_3559d0da937b8210c5e4f55f7bba1070</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-05 16:00:11</sys_created_on>
+        <sys_id>7959d0da937b8210c5e4f55f7bba1072</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-16 10:46:11</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=7959d0da937b8210c5e4f55f7bba1072"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Leave Approval process">3559d0da937b8210c5e4f55f7bba1070</model>
+        <model_id>3559d0da937b8210c5e4f55f7bba1070</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_3559d0da937b8210c5e4f55f7bba1070</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-05 16:00:12</sys_created_on>
+        <sys_id>8259d0da937b8210c5e4f55f7bba1081</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-16 10:46:11</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=8259d0da937b8210c5e4f55f7bba1081"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=3559d0da937b8210c5e4f55f7bba1070"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=3559d0da937b8210c5e4f55f7bba1070"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=3559d0da937b8210c5e4f55f7bba1070^sys_idNOT IN4a59d0da937b8210c5e4f55f7bba10a8"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Leave Approval process">3559d0da937b8210c5e4f55f7bba1070</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-05 16:00:12</sys_created_on>
+        <sys_id>4a59d0da937b8210c5e4f55f7bba10a8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-05 16:00:12</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VY227jNhD9FUFPLeACuthWnLetk0UDpBvUSduHIBUoaWgTpSlXopR4F/n3DnWxZV0cXzfZlwAmKc6ZwzNnyDx+0znxgOuX+gPxOOg9nQkJkSD8YbkAHJZq2BVkrubmRAREhtFSv5RRAj09jAKI9Euzp6eEJ3C/jG8C/AiXZl8Un+vFNP5+cZ2h2XcsF+YLdz6dS5cDSdWKgMULTpZ/FQtvi2F/xngQgdAvH596+oJEuK9UMb/VppgK7FOfjCwwfNu0LcswrIu+6Q1tz7QCm4Bh4Ib1fGtAZUva6yzhRYIIAENRwmNoYSQCEtwJvlytmCGhOSVz8hKzr7j7haHWUUDsPuRz/ixkPtwtJAtFPpIDyidDnszFlxyoogooSbgsqcKRJAY3gIXCpqIVoen9LHyelIE+M5GlUUzy0Cd89YtIGTEvkRArZinjyLGbkxCHSZTBnFyP7yZX7t+fHsa/XU/cyfX9w+Rm/HB9pb9m+bj/JWrHHGGBxc3TeV2d72cGXJ1UduxuxnZPj/2ILeQnXzI88xzSa28tzXEoApYx05CnX07Fm/Is0ipPzjA6FepXNi9V+s/1H01F5oP76XE4JCQA0qFHj1b0WE2yBZpsybea3TZlFiO7SLNvGOcWZ14nB2tzHgbAr9bb6Tg5naJamVgkUtHyTISMXRm6JAjcCmFqKWJ6S6x5bq9vqjJKBH7grohvajOjbcXfLYsR7iNWV8lNtiXO09tiy0kitBBPCP9ofhIhNVIrjYnezMm0YJTeAwdfVk6b/hlXf/3O4piJaQX1KmjGQSPmKhyqRitTymPHRwZ/OrAwm/ymNd5qBbp3dZompR5Qy3BUbZqG7VHTcIwBoYFtGL5Vqc4mmE6Usnb6Z6nSjhqNM4HxHeRU57JAaVQVvpM00k1dldmqYy+sYHwaaOaJoFkKWs3S7L08baW/fPhqU4bbUjtxnyZBSvCLYFdr29HVKA+f0U4PcDSP+P9OozARQd1i1J4aE9p6hfZTwd/PJ3Q3GkawHcDminfytTXDpUaJWJ7A0WxqeiPog4FGZqOHeYPRyPOJRakzdMAya462htGK7WM52RsKStsk2OVqrWJI2zS0h58dAbDhbXsDPN7VCgW2elo+92O41/MMhItQI5crf2qY2JSzAMq5gyu4ESVd1+yxVUwvRv7AdBzfwRcDVjHtg0fMvjUgI2doXwxqVdyAsg2mbCHhu7wj4mWcAflwj91zyjAGKVXL2L+TCrxUZt+QPEilmynutcwkwkj7EopfbtbrtHvAJpW9GE/VUndBgZtF2nlheKGcNXo6hv4VxzdCq7tgByvv+ZSp6SHdTOvopwz0LwYjardbBh21WcYaTDfMj3MF2FH1aWf9tN0FdhVx2loLnc37AFnW9FDt6luuHacixTw5Kdb5SLGPvuqURdf5fjsE7A/UlrILwTG9ScUEN6RVQ74KNZzQMIjGqFb8Vw6f495SkzNASjneaTGgpqIf68TVztCEslLw9wWS35IbHQqHteLm867Np3bqp315QuCQwcDuuLOO6i/PNkBv4P04rWhvpadthbO1H+23b33P1o5UkeHm0e/Ya06adXvDOS7r1pbzVtbHN5Nt7+YWFB+0TTz9D9ieMCQLHgAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=3559d0da937b8210c5e4f55f7bba1070^sys_idNOT IN8259d0da937b8210c5e4f55f7bba10a8,8a59d0da937b8210c5e4f55f7bba10a7,adba17d193c41210c5e4f55f7bba1013,bb346fe393e4d610c5e4f55f7bba1013,edba17d193c41210c5e4f55f7bba1012,edba17d193c41210c5e4f55f7bba1014"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment>Flexi leaves will be Auto approved.</comment>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Leave Approval process">3559d0da937b8210c5e4f55f7bba1070</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>5826a9fd-8a06-4148-bc60-609e08be424d</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-05 16:00:12</sys_created_on>
+        <sys_id>8259d0da937b8210c5e4f55f7bba10a8</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-16 10:42:57</sys_updated_on>
+        <ui_id>75b924a3-2804-4f12-8f89-385403494196</ui_id>
+        <values>H4sIAAAAAAAA/+VVy27iMBT9FeR1FCWE0pZdBUIaqdNK7YhNp4oc+wYsOY/xg8Ig/n1uEidEMHSo1E017HxfPufkHvyyI4KTCRkBD8LbcMyiMIqGQTC8GYXJOErCIY8oQEg8ktMMsFIBKxTH85pKWwV2u6kCaoDHoc+sUpCb/R7zXOhS0u3ClWGErYTkmCeTl1ePlFThRAOKTHZHqUshSZqAxNKnFtMxRrMtqzMvmM0QVyza4L3rnLnM4NsMM9hUwQkDj8DGQM4BgaRUavBIRnNOTaG2ZGKUxQCS5o+53HYVK5GbhmhGN1r8xptHQVWXAjJjToTu+IMmEmaNSE0qnVFDn3E6M1Z1mhWCgW504ZBSK820H2sKHksjirxpMdVg111Im+UPjSqkG9D7JlZDzKGsuFboG2rp86p4e2qBzkVey+JoyoJR2Z2oMUok1lRwdgQk1DpntCxFvoxLVaxF3YxQMn8p8eCnsnjDO7VY5j5lFW4flaX+HOOzOrygSlQkvuMYbN57RG/1VFKtD1RQx/iXrZA0xByFuFahliCut6FqZkqU5g6vWoMDvvfc4idX720Zuz0sVW/mYfk38fU4HF0PY8jKOFtmJpZA13C6/ucLP+aKC/C2rqgX7Ax+Z4yT2H2/d/DQJJwtrj7NFjdfzRaOypf3xb/cEAzf/c/tbVNtAN1zgjbUWP3TBkHEER4SBH5qgzNVH/PABShbD8wFSK7/Ars1ANpR4uMVNzSOTOCSg4VLdu/DpzkhHAf174v54b95Jl7/AISHVhUhCQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Leave Approval process">3559d0da937b8210c5e4f55f7bba1070</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-05 16:00:12</sys_created_on>
+        <sys_id>8a59d0da937b8210c5e4f55f7bba10a7</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-05 16:00:12</sys_updated_on>
+        <ui_id>4e8bc06a-0848-4c55-95b5-dd00bf883875</ui_id>
+        <values>H4sIAAAAAAAA/+VVy27iMBT9FeR1FCWE0pZdBUIaqdNK7YhNp4qc+AYsOY/xg8Ig/n2uEydEMHSo1E017HxfPufkHvyyI5yRCRkBC8LbcJxGYRQNg2B4MwqTcZSEQxZRgJB4pKA5YKWEtJQMz2sqjA3sdlMJVAOLQz81UkKh93vMM64qQbcLV4aRdMUFwzyZvLx6pKISJ2qQZLI7Sl0KSdAEBJY+tZiOMeptZc+sTE2OuGLeBu9d58xlBt9mmMEmCycMPAIbDQUDBJJRocAjOS0Y1aXckomWBgNImj0WYttVrHihG6I53Sj+G28eBbYuA2SWOhG64w+aCJg1IjWpbEY1fcbpqTay06zkKahGFwYZNUJP+7Gm4LHSvCyaFm0Hu+5SmLx4aFQh3YDeNzEKYgaV5WrRN9Sy51X59tQCnfOilsXRFGVKRXeiWkueGG3h7AgIqHXOaVXxYhlXslzzuhmh5P5S4MHPRPmGdyq+LHyaWtw+Kkv9OcZndXhBJbckvuMYbN57RG3VVFClDlRQx/iXsUgaYo5CXKtQSxDX22CbU8krfYdXrcEB33tu8ZOr97YsvT0sVW/mYfk38fU4HF0PY8irOF/mOhZA13C6/ucLP+aKC/C2rqgX7Ax+Z4yT2H2/d/DQJJwtrj7NFjdfzRaOypf3xb/cEAzf/c/tbVNtANVzgtJUG/XTBEHElElyrvFJOPXBubKPueACnK0L5hwEU38B3loADSnw+YobIkc2cMnBwiW7F+LTvBCOg/r3xRzx3zwUr38AEJeFWiMJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Leave Approval process">3559d0da937b8210c5e4f55f7bba1070</flow>
+        <generation_source/>
+        <order>9</order>
+        <parent_ui_id>b54f0a7b-5adf-4817-b1d4-3ec4f5969697</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-15 13:46:48</sys_created_on>
+        <sys_id>adba17d193c41210c5e4f55f7bba1013</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-16 10:42:57</sys_updated_on>
+        <ui_id>52a1fb38-02bf-498a-8712-c061cd8ce3f9</ui_id>
+        <values>H4sIAAAAAAAA/+VVXW/aMBT9K8jPUZQQSlveJhDSpK6V2omXrrKc+AYsOR+1HQpD/PddJ06IYGVU6ks13ny/fM7JPfh5RwQnEzICHoS34TiJwigaBsHwZhTG4ygOhzxiACHxSM4ywEoFSaE4ntdMVjaw200VMAOchn5SKQW52e8xz4UuJdsuXBlGkpWQHPNk8vzikZIpnGhAkcnuKHUpJMlikFj62GI6xmi2pT3zIqkyxEVFG7xznTOXGXyfYQabLJww8AhsDOQcEEjKpAaPZCznzBRqSyZGVRhA0vwhl9uuYiVy0xDN2EaL33jzKLB1KSCzxInQHX+yWMKsEalJpTNm2BNOT0ylOs0KkYBudOGQskqaaT/WFDyURhR502LsYNddyCrL7xtVSDeg900qDZRDabla9A219GlVvD22QOcir2VxNGWRMNmdmDFKxJWxcHYEJNQ6Z6wsRb6kpSrWom5GKJm/lHjwU1m84Z1aLHOfJRa3j8oyf47xWR1eMCUsiR84Bpv3HtFbPZVM6wMV1JG+VhZJQ8xRoLUKtQS03gbbnChRmm941Roc8L3nFj++Ordlye1hqXozD8u/odfjcHQ9pJCVNFtmhkpgazhd//cLP+aKC/C2rqgX7B38zhgnsbt+7+C+SThbXH2aLW6+mi0clS/vi3+5IRie/c/tbVNtAN1zgjbMVPpXFQQRruwrRYhIEnGcWOFM5ce8cAHa1gtzAZLrv8BvjYC2lPiI0YbOkRlccrBwye6d+DRHhOOg/n0xX/w3z8XLHxSULOgpCQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Leave Approval process">3559d0da937b8210c5e4f55f7bba1070</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id>374cc0ba-e7a0-4b9b-b044-c61e1d168f8e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-09-16 10:46:11</sys_created_on>
+        <sys_id>bb346fe393e4d610c5e4f55f7bba1013</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-16 10:46:11</sys_updated_on>
+        <ui_id>11536870-c34c-4ff2-87c2-6a41ac8ccc1a</ui_id>
+        <values>H4sIAAAAAAAA/+VVwW7bMAz9FUNnw7DjLG1zKxLk1LXDOuTStYJs0YkAWXYlOU0W+N9HWXYadMnWAbsU803ko/geRdIPeyI4mZJJAvGnq2SSp0majuJ4dDlOskmaJSOeMoAxCYliJSDSskwC7Q4h2TDZOOOWXkyS8cWIQlnTclVaKoFtgLK61hWCEMqFqSXbLd8fka+F5BoUmT48hqRmGnNa0GS6f+N6rwLJMpAI/eYknFFkd/VJ281xbHDrHZXmjk8cEthaUByQSMGkgZCUTHFmK70jU6sbNGhg/E7J3QGxFsrihcRht0b8wLSXscMVgMpy8L7DsUs890X0rmLOLLvH23Pb6B6eryuRg/F14VCwRtrZsc0D7morKuVDOql9dCWbUt36spDDBcOboaUxQDnUTqtj30sp7tfVy9eB6UKoriy9U1Y5PudwYtZqkTXW8dkTkFDiRbTEZxdqRd3biy4YuZTRSuIhKmT1gkmNWKmI5Y54hKVl0QLt8868ZFo4FZ/xGgxuQ2J2ZiaZMa9asJD0uXFMvLJeA/VlcCG5FrW9xgQb6Om24TAeHOKrs82VZK/N1E2EORqN/X6GT2+B0yTKG40VspFqygx02z75bgf9vYnjlJ+CYsF1hM3EVl0A6hom5GyMg1k0eYCGZySEgCesqCu28fYvOG8Ggp5BcOOmL/gd2aCo9ElAR9HJb9tf5/x/k/+XS+vPfTUsrYUAyc2JRhs2Fi5SidSob7w3W6t3Bsve2W+u5F9trmQSd98H219e4IdfX0d/qzOL7PEnSHiu1OkHAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Leave Approval process">3559d0da937b8210c5e4f55f7bba1070</flow>
+        <generation_source/>
+        <order>8</order>
+        <parent_ui_id>b54f0a7b-5adf-4817-b1d4-3ec4f5969697</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-15 13:46:48</sys_created_on>
+        <sys_id>edba17d193c41210c5e4f55f7bba1012</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-16 10:42:57</sys_updated_on>
+        <ui_id>f7062035-a3db-4883-967e-78dd7a122979</ui_id>
+        <values>H4sIAAAAAAAA/91VwW7bMAz9FUNnw7DjLG1zKxLktLXDOuTStYJs0YkAWXYlOU0W+N9HWXYadAnWAr10vol8FN+jSPp+TwQnUzJJIP5ylUzyNEnTURyPLsdJNkmzZMRTBjAmIVGsBERalkmg3SEkGyYbZ9zSi0kyvhhRKGtarkpLJbANUFbXukIQQrkwtWS75dsj8rWQXIMi0/uHkNRMY04Lmkz3r1xvVSBZBhKhP52EM4rsrj5p+3ocG9x4R6W54xOHBLYWFAckUjBpICQlU5zZSu/I1OoGDRoYv1Vyd0CshbJ4IXHYrRG/Me1l7HAFoLIcvO9w7BLPfRG9q5gzy+7w9tw2uofn60rkYHxdOBSskXZ2bPOA29qKSvmQTmofXcmmVDe+LORwwfBmaGkMUA610+rY91KKu3X1/GNguhCqK0vvlFWOzzmcmLVaZI11fPYEJJR4ES3x2YVaUff2ogtGLmW0kniIClk9Y1IjVipiuSMeYWlZtED7vDMvmRZOxTe8BoPbkJidmUlmzIsWLCR9ahwTr6zXQH0ZXEiuRW2vMcEGerptOIwHh/jqbHMl2UszdRNhjkbDNzToX00cp3y/n2EjWOA0ifJGY71shDXVEfYLW4Fu20ekPgzB2RgHs2jyAA1PmBMBj1g0V0/j7d9xpAwEPYPAriE4ld8Pnmvytg26Q1BUOjiJdVzb9u9x/k9VvnMF/btLhhW0ECC5OdE2w/7BtSiRFfVt9GoH9c5g2Tv7PZR81B5KJnH3fbJt5AV++mV09O85s5Ye/gCd6+RotwcAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Fire Event">80a30edeff30311077a95dac793bf19b</action_type>
+        <action_type_parent display_value="Fire Event">15e10e5eff30311077a95dac793bf11e</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>80a30edeff30311077a95dac793bf19b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Leave Approval process">3559d0da937b8210c5e4f55f7bba1070</flow>
+        <generation_source/>
+        <order>10</order>
+        <parent_ui_id>b54f0a7b-5adf-4817-b1d4-3ec4f5969697</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-15 13:46:48</sys_created_on>
+        <sys_id>edba17d193c41210c5e4f55f7bba1014</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-16 10:42:57</sys_updated_on>
+        <ui_id>77dbbd55-b382-4e1d-b105-1f8bef77ef2a</ui_id>
+        <values>H4sIAAAAAAAA/+2W227bOBCGX0XQtWWIFCVKvivizaJAt1002d4UhUCRQ5sLHVyKcuMN8u5LHXyu7bhIAyy6NwY0POiff+bz6POjq4Q7cWPOAh8ESBn4AUI+pSwJBeM0CTKJEnBHbskKsDthCaVJu4eRu2R50wYpCxNEQ5QEnCCMfB4CkWEoaZYx5DNutwpVL3K2+jSceEhphAjFKRSLtJgVZpwDW0LKFgtd2WvtCT5XudBQupPPX0bugmn7TgPanTweLD03g5xlkNutv7UpnMjIrBZtTIMEez9fh94NRz/uxCstWjVo5MKDgVKAlSFZXsPILVgpmKn0yp0Y3diABiY+lPlqs2OurISJO4VaaRDO3ao2UDidMsfMmXHqedXkwsnAke0Ot730oVb/WHUBHu0InLj1qu5z0DBTdWvRzvo9y3KY9uavc3c+dhs1M6oq7WY5ZYbdWaXcNLq9sXO/Uhzq3mFrK2tyc7Mb6zd8WHR3dEdM+6oTeniVN0X5vnfc3dy4bgcbaWpIBSxaI1trBp/k3bz6tnH9VpWd58NiXnHbKdutwDSf3yrIxWFZmTFaZY1pxT+6jbo/LnMf/F6hIYeivauwzanKWdp2qOp02LSK8Sy3D2OZV9+s/lrNyjHjrSlj2wJsfGvj0y78iWnVOvSHvabzpFF/leprA287ueAHIKj0KCPEIyTMvCwjgcf9MEmYj7FE2H0atebe5Kyut1baJNKvTWtEb+xgYdqXpT3CtVqYN1bUEga3nkYD+Nw/hw0jW0w0cNvxO9A/PkrqR9gPQo8FIvNIHAdeElHwaCwEZQjjhCbj/tzT0/F/wNWMP0NsvqnfoPZQ/QC4qHjTFVWJA8Snw4rzdrqFHL8E5L+3jdILc6rsb+DGkboqLO/gQE9+R9AZ1M+Q/fIc/wi2vRNXUHuCzP367LO5X6FXoVMizkKEAw8HlHsk4bEXE7A/llFMkphjHv0Anb3TlxA9O9kY3Tb5un2Wp4ZsejRkL43l4xNXIntZ/BrZ+0H9QTIDsN3j7pR+t3vMed8vDLgG53EdIlte+67dUBf7/zHqrh+WJ7Dbc3mfuj2fXwW6BBMiozj2MsyEHS8RsSPRjz2KiI9tT+EgDH7CSBTx2ZbNti1qm79AexPxxvaUAZGiMW+0rYIZl02Rgf7e+Luw+zrOniF6zdmf66scdJzKQJv9OLRlPSDtbh0cKCNXUrY/Fd+UK6czrv/e1VBX+RJqx1QOczbv32HS/2Wp3LixT+SmHq9CYxT6ie9j6YkoBo8giT2GktjDOMiQiDjBUfIzaCRnG1vutzC+QGM/zdqmfi6RByeupPKy+GMq8XFK11AZ/k/lL0SlJBEJOKUesX1mP0xjOyMphF4QCkmJoDyK0QtS+eVfq1IRHjESAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=3559d0da937b8210c5e4f55f7bba1070"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=3559d0da937b8210c5e4f55f7bba1070^sys_idNOT IN0e59d0da937b8210c5e4f55f7bba10a3,39ba17d193c41210c5e4f55f7bba102a,3dba17d193c41210c5e4f55f7bba1029,4e59d0da937b8210c5e4f55f7bba10a6,8a59d0da937b8210c5e4f55f7bba10a5,bdba17d193c41210c5e4f55f7bba1027"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">0f4950da937b8210c5e4f55f7bba10ea</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Leave Approval process">3559d0da937b8210c5e4f55f7bba1070</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Do the following in Parallel">5d31e5dedfe50300b61ecae83df26326</logic_definition>
+        <order>12</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-05 16:00:12</sys_created_on>
+        <sys_id>0e59d0da937b8210c5e4f55f7bba10a3</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-16 10:46:11</sys_updated_on>
+        <ui_id>2c33c013-beaf-443e-9273-6aee8d703e3f</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">e17a5f9193c41210c5e4f55f7bba10c8</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Leave Approval process">3559d0da937b8210c5e4f55f7bba1070</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>11</order>
+        <outputs_assigned/>
+        <parent_ui_id>b54f0a7b-5adf-4817-b1d4-3ec4f5969697</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-15 13:46:49</sys_created_on>
+        <sys_id>39ba17d193c41210c5e4f55f7bba102a</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-16 10:46:11</sys_updated_on>
+        <ui_id>d8285bc0-2f51-4116-b7cc-1f5668dc763b</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">9d82205a93bb8210c5e4f55f7bba10aa</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Leave Approval process">3559d0da937b8210c5e4f55f7bba1070</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>7</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-15 13:46:48</sys_created_on>
+        <sys_id>3dba17d193c41210c5e4f55f7bba1029</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-16 10:46:11</sys_updated_on>
+        <ui_id>b54f0a7b-5adf-4817-b1d4-3ec4f5969697</ui_id>
+        <values>H4sIAAAAAAAA/+1VyW7bMBD9FZdnQZDsOGh8MxwYKJAFbYJc2kQYk6OYKEWqJOWlhv+9Q1Fe0LhoAgQ99Wa+2d4bzYM3zDS+bry7N2Pn5LNmo6+PCZM6YPR7wzRUyEaMGy2kl0YXLZCwBagmBMZK9fy6RtfDFcfa96YKV7IHWvSuwaPV0q8pXUhXK1g/vK2Kz6USFjtWNViaTVE22vwWkoKalhmU+QXP+aB/PuhnWf/jWT47H8zyvhgAwoAaKpihotTJTk7vqkWSP+oMLAl33kr93L2vui53O9BYEVjlWcJw5VELJD4lKIcJq0gUeGPXe8QiiFutDsBcak/tWEheOfmTBvaHw5BYIknkGIP75z3MFF7GjcZQeQkeiE7DfWO7dD43kqOLCxJYQqP85BiLCbd1kBtLfGjcVRvVVPomboXtG+w+ICGNw0JgHdQG+p2W8m5ull92TKdSt5vpgspwUPsXeNrfrPGBz4ahwooaFRXUNW21qK1ZyLaYuFTps6JHWiqzpKHhUlPggXhKy4V0SvhlCz+AlUHFNbWh4khzBk7yor1qakdrQrZNmFu7iQLnDiJpw8WPJlCMkjtxRdxPKOFW1n5MkxfY6dgmL01y5I/NZkLf26Mo8pQ3lrbiU4WwwCJc0nb74VuTZQNRhvsv2sDTzedXFlU7q8TClzb7t8Pf5tYLGJbDPBueduvZ+Sm3nvDpGy3a/4tFw2280qFZlv236LtYVLoiGqvT1g5/R4c+BjvGmftdc+mIWvuZPu3+7UJgTQcm+TG0NPZ7EHXAtr8AGM0rPTcHAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">474950da937b8210c5e4f55f7bba10ef</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Leave Approval process">3559d0da937b8210c5e4f55f7bba1070</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id>5826a9fd-8a06-4148-bc60-609e08be424d</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-05 16:00:12</sys_created_on>
+        <sys_id>4e59d0da937b8210c5e4f55f7bba10a6</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-16 10:46:11</sys_updated_on>
+        <ui_id>4661bbf4-e51c-4560-bec4-436ebafea920</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">474950da937b8210c5e4f55f7bba10ed</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Leave Approval process">3559d0da937b8210c5e4f55f7bba1070</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-05 16:00:12</sys_created_on>
+        <sys_id>8a59d0da937b8210c5e4f55f7bba10a5</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-16 10:46:11</sys_updated_on>
+        <ui_id>5826a9fd-8a06-4148-bc60-609e08be424d</ui_id>
+        <values>H4sIAAAAAAAA/+1V22rbQBD9FbPPQkh2bJq8BRtDIW2gMXlpUzHaHdlLV1p1L77U+N87q4ttEoc2kL71zXvmduZoDt4z7V3tnV3oW2vlsmI3X58iJquA0e89q6BEdsO4roR0UldZA0RsDcqHwGJX40DawVxJ3EoKCGlrBbvH1+J8JZUw2E2qwVA/h4bd7J+FpKDyIoEiveYpHw0no2GSDD9cpflklKdDMQKEETVUkKOi1GlPcXDXINGr3B1xItw6I6tl977rujz0oDYisEqTiOHWYSWQ+BSgLEashEqA02Z3RAyCuK/UCVjJylE7FpK3Vv6igcPxOCQWSCtybIPH5wJyhbNWuzZUzMAB0fHcedOl85WWHG0rkMACvHLTc6xNuK/Dum2JC427aq18WX1uVWHHBv2nIsRbzATWYdtAv9uleFjpzZee6VxWjTJdUGkO6vgCR/rl3gU+e4YKS2qUlVDXpGpWG72WTTFxKeOlokdcKL2hoeH6YuCBeEziQjwnfNbAj2Bk2OITtaHilmYOVvKsuVRqRzIhO0TM7uxUgbWnJUnh7KcPFNuVu+WyVp9Qwo2s3S1NXmO3xyF6efhnN7/fT+l7OxRZGnNvSBUXK4Q1ZuGSDodvPklGolB08FmDf79UYR04b/ts6/NSOsp4aaF/Pe5tjryGcTFOk/FlR15NLjnyghffaMPhH2wYvv9fujBJkv82fBcbSpu15ul2a4a/owufguXamUetubRErflMH/t/qRDY0YFJfg5ttPkRljphh9+tfYXx7wYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">5982205a93bb8210c5e4f55f7bba109b</block>
+        <comment/>
+        <connected_to>5826a9fd-8a06-4148-bc60-609e08be424d</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Leave Approval process">3559d0da937b8210c5e4f55f7bba1070</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-15 13:46:48</sys_created_on>
+        <sys_id>bdba17d193c41210c5e4f55f7bba1027</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-16 10:46:11</sys_updated_on>
+        <ui_id>374cc0ba-e7a0-4b9b-b044-c61e1d168f8e</ui_id>
+        <values>H4sIAAAAAAAA/+1V32vbMBD+V4aejbGdtWx5KwmFQbfCWvqydeYsyYmYLHn6kdQz+d93shwnrBntIOxpb9Z3urvvPt2He6K9a72z9/rKWrFSZP7lMSFCBQy/e6Kg4WROqFZMOKFVOQAJ2YD0IYCfTNhWQvdwQOhaSGb4WK0FgzmOGzLvfwsJhgl1BnX+nuZ0VlzOiiwr3r3Nq8tZlRdsBhwKLCih4hKvLvY03twMSPJHfq5rA26dEWo1nm/GKnd7UBsWWOVZQviT44px5FODtDwhDSgGTptuQgwHdqvkAVgL5eLADTxZ8RMbFhcX4WLNcUQ6qjEd76GSfBnViqF6CQ6QjqfOm0k8LSi3USDGa/DSLY6xeOG2DePGFBcKj9la+kZ9iqqQqcDR43jLS8bbMG2gP85S36319vOe6bVQgzJjUGoKcjqBQ/0q7wKfnnDJGyxUNtC2qGrZGr0RQzJyadKVxENaS73FpmHDUqCBeIriQnqN+HKAH8CIMMVHLIPJkWYFVtBy2EYshzJxskuI7exCgrWHIVHh8ocPFOPI43Bl1CekUCNad4WdN3ycY5c8X+6jve77Bb6346zMU+oNquJSyWHDy7BJu91Xn2Uz1uANo4TryiH27VSWdeC83WdYXzXC4Y3nxvkXLc/qzPyUM0948i/tWLxgx7AHr3RjlmX/7XgWOwpbRhONsw3Nz+jGx2C92HPSmgqL1IZn+rD/I4VAhwsm6DG01eZ7GOqA7X4B5A/50tsGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=3559d0da937b8210c5e4f55f7bba1070^sys_idNOT INb9ba17d193c41210c5e4f55f7bba105b"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>3559d0da937b8210c5e4f55f7bba1070</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{f7062035-a3db-4883-967e-78dd7a122979.record.approver.first_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-15 13:46:49</sys_created_on>
+        <sys_id>b9ba17d193c41210c5e4f55f7bba105b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-15 13:46:49</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>85d548ea-68c8-4bc7-b744-7d492f977d7f</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=3559d0da937b8210c5e4f55f7bba1070"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_3559d0da937b8210c5e4f55f7bba1070^sys_idNOT IN0a59d0da937b8210c5e4f55f7bba107e,8659d0da937b8210c5e4f55f7bba109e"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_3559d0da937b8210c5e4f55f7bba1070</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-05 16:00:12</sys_created_on>
+        <sys_id>0a59d0da937b8210c5e4f55f7bba107e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Employee Management" source="x_761472_emp_mgmt">63004df993330210c5e4f55f7bba1071</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-05 16:00:12</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_3559d0da937b8210c5e4f55f7bba1070</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-05 16:00:12</sys_created_on>
+        <sys_id>8659d0da937b8210c5e4f55f7bba109e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Employee Management" source="x_761472_emp_mgmt">63004df993330210c5e4f55f7bba1071</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-05 16:00:12</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_3559d0da937b8210c5e4f55f7bba1070"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_3559d0da937b8210c5e4f55f7bba1070"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_3559d0da937b8210c5e4f55f7bba1070"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>43ae3a39933f0210c5e4f55f7bba10aa</sys_id>
+        <latest_snapshot>3559d0da937b8210c5e4f55f7bba1070</latest_snapshot>
+        <compiler_build>glide-xanadu-07-02-2024__patch0-07-16-2024_07-27-2024_1019.zip</compiler_build>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=43ae3a39933f0210c5e4f55f7bba10aa^sys_idNOT IN0259d0da937b8210c5e4f55f7bba10c2"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"0259d0da937b8210c5e4f55f7bba10c2","name":"plan","plan_signature":null}}</plan>
+        <plan_id>43ae3a39933f0210c5e4f55f7bba10aa</plan_id>
+        <snapshot>4754632793e4d610c5e4f55f7bba104b</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-05 16:00:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0259d0da937b8210c5e4f55f7bba10c2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-16 10:46:12</sys_updated_on>
+        <trigger display_value="">ce59d0da937b8210c5e4f55f7bba10bf</trigger>
+    </sys_flow_trigger_plan>
     <sys_flow_subflow_plan action="delete_multiple" query="plan_id=43ae3a39933f0210c5e4f55f7bba10aa"/>
 </record_update>

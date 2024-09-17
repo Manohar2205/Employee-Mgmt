@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_761472_emp_mgmt_leave" version="2" view="">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>number</element>
+            <list_id display_value="x_761472_emp_mgmt_leave" element="NULL" name="x_761472_emp_mgmt_leave" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">9b95cdb593730210c5e4f55f7bba101b</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-08-04 05:56:40</sys_created_on>
+            <sys_id>a795cdb593730210c5e4f55f7bba101d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-08-04 05:56:40</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>discussed</element>
+            <list_id display_value="x_761472_emp_mgmt_leave" element="NULL" name="x_761472_emp_mgmt_leave" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">9b95cdb593730210c5e4f55f7bba101b</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-08-04 05:56:40</sys_created_on>
+            <sys_id>6f95cdb593730210c5e4f55f7bba101d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-08-04 05:56:40</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>end_date</element>
+            <list_id display_value="x_761472_emp_mgmt_leave" element="NULL" name="x_761472_emp_mgmt_leave" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">9b95cdb593730210c5e4f55f7bba101b</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-08-04 05:56:40</sys_created_on>
+            <sys_id>ef95cdb593730210c5e4f55f7bba101d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-08-04 05:56:40</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>half_day</element>
+            <list_id display_value="x_761472_emp_mgmt_leave" element="NULL" name="x_761472_emp_mgmt_leave" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">9b95cdb593730210c5e4f55f7bba101b</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-08-04 05:56:40</sys_created_on>
+            <sys_id>6395cdb593730210c5e4f55f7bba101e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-08-04 05:56:40</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>leave_type</element>
+            <list_id display_value="x_761472_emp_mgmt_leave" element="NULL" name="x_761472_emp_mgmt_leave" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">9b95cdb593730210c5e4f55f7bba101b</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-08-04 05:56:40</sys_created_on>
+            <sys_id>e395cdb593730210c5e4f55f7bba101e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-08-04 05:56:40</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>log</element>
+            <list_id display_value="x_761472_emp_mgmt_leave" element="NULL" name="x_761472_emp_mgmt_leave" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">9b95cdb593730210c5e4f55f7bba101b</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-08-04 05:56:40</sys_created_on>
+            <sys_id>6795cdb593730210c5e4f55f7bba101e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-08-04 05:56:40</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>reason</element>
+            <list_id display_value="x_761472_emp_mgmt_leave" element="NULL" name="x_761472_emp_mgmt_leave" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">9b95cdb593730210c5e4f55f7bba101b</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-08-04 05:56:40</sys_created_on>
+            <sys_id>e795cdb593730210c5e4f55f7bba101e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-08-04 05:56:40</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>start_date</element>
+            <list_id display_value="x_761472_emp_mgmt_leave" element="NULL" name="x_761472_emp_mgmt_leave" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">9b95cdb593730210c5e4f55f7bba101b</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>7</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-08-04 05:56:40</sys_created_on>
+            <sys_id>6b95cdb593730210c5e4f55f7bba101e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-08-04 05:56:40</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_761472_emp_mgmt_leave</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-08-04 05:56:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9b95cdb593730210c5e4f55f7bba101b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_761472_emp_mgmt_leave</sys_name>
+            <sys_package display_value="Employee Management" source="x_761472_emp_mgmt">63004df993330210c5e4f55f7bba1071</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+            <sys_update_name>sys_ui_list_x_761472_emp_mgmt_leave_null</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-08-04 05:56:40</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

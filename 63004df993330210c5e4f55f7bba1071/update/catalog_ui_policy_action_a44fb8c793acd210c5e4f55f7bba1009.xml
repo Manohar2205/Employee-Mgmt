@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="INSERT_OR_UPDATE">
+        <catalog_item display_value="Apply Leave">8438467593f70210c5e4f55f7bba1053</catalog_item>
+        <catalog_variable>IO:903882bd93f70210c5e4f55f7bba106c</catalog_variable>
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field/>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>ignore</mandatory>
+        <order>100</order>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-09-14 09:28:33</sys_created_on>
+        <sys_id>a44fb8c793acd210c5e4f55f7bba1009</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>half_day</sys_name>
+        <sys_package display_value="Employee Management" source="x_761472_emp_mgmt">63004df993330210c5e4f55f7bba1071</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_a44fb8c793acd210c5e4f55f7bba1009</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-14 09:28:33</sys_updated_on>
+        <table/>
+        <ui_policy display_value="Hide Half day if leave type is Maternity or Flexi">420f344393acd210c5e4f55f7bba100c</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <variable>half_day</variable>
+        <variable_set/>
+        <visible>false</visible>
+    </catalog_ui_policy_action>
+</record_update>

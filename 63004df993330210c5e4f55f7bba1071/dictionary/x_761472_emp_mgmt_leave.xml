@@ -3,6 +3,7 @@
         <element attributes="edge_encryption_enabled=true" label="Reason" mandatory="true" max_length="60" name="reason" type="string"/>
         <element label="Half day" max_length="40" name="half_day" type="boolean"/>
         <element attributes="edge_encryption_enabled=true" label="Start Date" max_length="40" name="start_date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="Rejected Reason" max_length="40" name="rej_reason" type="string"/>
         <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="1" display="true" label="Leave type" mandatory="true" max_length="40" name="leave_type" type="choice">
             <choice>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="rej_reason" label="Rejected Reason" language="en" table="x_761472_emp_mgmt_leave">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>rej_reason</element>
+            <help/>
+            <hint/>
+            <label>Rejected Reason</label>
+            <language>en</language>
+            <name>x_761472_emp_mgmt_leave</name>
+            <plural>Rejected Reasons</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-08-04 10:51:43</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Rejected Reason</sys_name>
+            <sys_package display_value="Employee Management" source="x_761472_emp_mgmt">63004df993330210c5e4f55f7bba1071</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Employee Management">63004df993330210c5e4f55f7bba1071</sys_scope>
+            <sys_update_name>sys_documentation_x_761472_emp_mgmt_leave_rej_reason_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-08-04 10:51:43</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
